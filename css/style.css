@@ -29,7 +29,7 @@ header {
  height: 50px;
 }
 
-#header-inner {
+/* .name-and-nav-wrap {
  height: inherit;
  display: flex;
  justify-content: space-between;
@@ -38,12 +38,43 @@ header {
 .header-name {
  height: inherit;
  display: flex;
+ align-items: center;
 }
 
-.nav-list{
+.header-name > h1 {  
+  font-size: 18px;
+  line-height: 1.83;
+}
+
+.header-name > h1:before {
+  content: " ";
+  background-image: url(../images/足跡_1.jpg);
+  background-size: contain;
+  vertical-align: middle;
+  display: inline-block;
+  width: 25.5px;
+  height: 25px;
+  margin-right: 9.5px;  
+ }
+
+ .header-nav {
+  height: inherit;
+ }
+.nav-list {
  height: inherit;
  display: flex; 
 }
+
+.nav-list li {
+  height: inherit;
+}
+
+.nav-btn {
+  background-color: yellow;
+  height: inherit;
+  font-size: 14px;
+  line-height: 2.35;
+} */
 
 
 /* main */
@@ -153,6 +184,7 @@ header {
   font-size: 25px;
   line-height: 1.448;
 }
+
 
 .title::before,
 .title::after {
