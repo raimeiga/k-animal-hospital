@@ -29,7 +29,7 @@ header {
  height: 50px;
 }
 
-/* .name-and-nav-wrap {
+.name-and-nav-wrap {
  height: inherit;
  display: flex;
  justify-content: space-between;
@@ -74,7 +74,7 @@ header {
   height: inherit;
   font-size: 14px;
   line-height: 2.35;
-} */
+}
 
 
 /* main */
