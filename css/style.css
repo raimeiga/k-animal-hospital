@@ -25,28 +25,30 @@ picture img {
 
 /* ヘッダー */
 header {
+  height: 50px;  
+}
+
+.header-inner {  
+  height: inherit;
+  display: flex;
+  column-gap: 332px;
+  align-items: center;
+  max-width: 1000px;  
   width: 100%;
- height: 50px;
+  padding-inline: 60px 20px;
+  margin-inline: auto;  
+ }
+
+.header-rogo-name {
+  width: 26%;
 }
 
-.name-and-nav-wrap {
- height: inherit;
- display: flex;
- justify-content: space-between;
-}
-
-.header-name {
- height: inherit;
- display: flex;
- align-items: center;
-}
-
-.header-name > h1 {  
+.header-rogo-name > h1 {  
   font-size: 18px;
   line-height: 1.83;
-}
-
-.header-name > h1:before {
+ }
+ 
+ .header-rogo-name > h1:before {
   content: " ";
   background-image: url(../images/足跡_1.jpg);
   background-size: contain;
@@ -57,24 +59,30 @@ header {
   margin-right: 9.5px;  
  }
 
- .header-nav {
+.header-nav {
+  width: 45%;
   height: inherit;
- }
-.nav-list {
- height: inherit;
- display: flex; 
+  display: flex;
+  align-items: center;  
+  column-gap: 10px;
 }
 
-.nav-list li {
-  height: inherit;
-}
-
-.nav-btn {
-  background-color: yellow;
-  height: inherit;
+.nav-btn {  
   font-size: 14px;
-  line-height: 2.35;
+  line-height: 4;
+  height: inherit;
+  /* padding-top: 10px; */
+  /* background-color: yellow; */
+  transition: color 0.4s linear; 
 }
+
+.nav-btn:hover {
+  color:#00AAEE;
+}
+
+
+
+
 
 /* main */
 #box {
@@ -293,14 +301,14 @@ header {
 }
 
 .news-item > a > p:hover {
-  color:#00AAEE;
+  color:#00AAEE; 
 }
 
 .date {
   font-size: 17px;
   line-height: 1.47;
   padding: 18px 12px 17px 21px; 
-  transition: all 1s ease-in; 
+  transition: color 0.5s ease-in; 
 }
 .news-headline {
   /* width: 22.3%; */
@@ -310,7 +318,7 @@ header {
   line-height: 1.25;
   padding-left: 25px;
   padding: 18px 24.5px 17px 12.5px;  
-  transition: all 1s ease-in; 
+  transition: color 0.5s ease-in; 
 }
 .news-article {
   /* width: 63.3%; */
@@ -318,7 +326,7 @@ header {
   font-size: 17px;
   line-height: 1.764;
   padding: 15px 40px 15px 24.5px;  
-  transition: all 1s ease-in; 
+  transition: color 0.5s ease-in; 
 }
 
 /* access（アクセス） */
