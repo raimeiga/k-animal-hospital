@@ -72,26 +72,55 @@ header {
   width: 60%;
   height: inherit;  
   display: flex; 
-  justify-content:flex-end;
-  
+  justify-content:flex-end;  
 }
 
-.nav-list {
+footer {
+  padding-block: 66px 70px;
+ }
+
+.footer-wrap {
+  width: 80.10%
+}
+
+.footer-nav {
+  width: 65.65%;
+  /* 幅はpxでいうと604px */
+}
+
+.footer-nav-list {
+  width: 100%;  
+  display: flex; 
+  column-gap: 2.3%;
+  /* 2.3％＝14px */  
+ }
+ 
+ .line {
+ 
+ }
+
+
+ 
+ 
+
+ 
+
+.header-nav-list {
   width: 100%;
   height: inherit;
   display: flex; 
-  column-gap: 2.6%;
+  column-gap: 1.6%;
   display: flex; 
   justify-content:flex-end;
  }
 
- .nav-list li {
+ .header-nav-list li {
   height: inherit;
   display: flex;
   align-items: center;    
 }
 
-.nav-btn {  
+.header-nav-btn {  
   height: inherit;
   font-size: 14px;
   line-height: 4;  
@@ -99,13 +128,9 @@ header {
   transition: color 0.4s linear; 
 }
 
-.nav-btn:hover {
+.header-nav-btn:hover {
   color:#00AAEE;
 }
-
-
-
-
 
 /* main */
 #box {
