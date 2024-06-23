@@ -75,38 +75,8 @@ header {
   justify-content:flex-end;  
 }
 
-footer {
-  padding-block: 66px 70px;
- }
-
-.footer-wrap {
-  width: 80.10%
-}
-
-.footer-nav {
-  width: 65.65%;
-  /* 幅はpxでいうと604px */
-}
-
-.footer-nav-list {
-  width: 100%;  
-  display: flex; 
-  column-gap: 2.3%;
-  /* 2.3％＝14px */  
- }
- 
- .line {
- 
- }
-
-
- 
- 
-
- 
-
 .header-nav-list {
-  width: 100%;
+  width: 100%;  
   height: inherit;
   display: flex; 
   column-gap: 1.6%;
@@ -133,45 +103,36 @@ footer {
 }
 
 /* main */
-#box {
- height: 503px; 
-}
-
 #main-visual{
  position: relative;  
  /* 子要素どうしが重なるので、親にposition: relativeを指定 */
- display: flex; 
-}
+ /* display: flex;  */
+ }
 
-.caption {
- width: 45.55%;
- position: absolute;
+.caption-mid {
+  background-color: rgba(255, 255, 255, 0.702);
+  position: absolute;  
+  z-index: 11;  
+  padding: 22px 3.2% 22px 9.2%;
+  margin-block: 152px 138px ;  
+}
  /* 重ねる要素にはposition: absolute;を指定（親にrelative） */
- z-index: 11;
- top: 152px ;
- background-color: rgba(255, 255, 255, 0.702);
- padding: 22px 3.24% 22px 9.1%;
- display: grid;
-  row-gap: 10px; 
-  /* row-gapはdisplay: gridプロパティの値 */
+
+.caption-sm {
+  width: 72.76%;
+  /* padding: 23px 7.1% 23px 20.3%; */
 }
 
-#main-visual h2 { 
- font-size: 25px; 
- line-height: 1.44;
+#caption-1 {
+  font-size: 25px; 
+  line-height: 1.44; 
 }
 
-#main-visual h3 {
- color: #0D96A0;
+#caption-2 {
+  color: #0D96A0;
  font-size: 40px;
  line-height: 1.5;
 }
-
-#dog-and-doctor {
- display: block;   
- z-index: 10;  
-}
-/* ↑重ねる要素にはposition: absolute;を指定（親にrelative） */
 
 /* greeting */
 #greeting {
@@ -213,13 +174,13 @@ footer {
   }
 }
 
-/* #rogo-3footmarks {
+#rogo-3footmarks {
   width: 83.75px;
   height: 77.12px;
   position: absolute;
   top:722.99px;
   left: 920px;
-} */
+}
 
 /* about（強み） */
 #about {
