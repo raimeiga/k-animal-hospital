@@ -31,7 +31,8 @@ header {
 .header-inner {  
   height: inherit;
   display: flex;
-  column-gap: 332px;
+    /* justify-content: space-between; */
+  /* column-gap: 36%; */
   align-items: center;
   max-width: 1000px;  
   width: 100%;
@@ -40,7 +41,7 @@ header {
  }
 
 .header-rogo-name {
-  width: 26%;
+  width: 40%;  
 }
 
 .header-rogo-name > h1 {  
@@ -59,20 +60,42 @@ header {
   margin-right: 9.5px;  
  }
 
+/* .header-nav-wrap {
+  width: 60%;
+  height: inherit;  
+  display: flex; 
+  justify-content:flex-end;
+} */
+
 .header-nav {
-  width: 45%;
+  /* width: 67.39%; */
+  width: 60%;
+  height: inherit;  
+  display: flex; 
+  justify-content:flex-end;
+  
+}
+
+.nav-list {
+  width: 100%;
+  height: inherit;
+  display: flex; 
+  column-gap: 2.6%;
+  display: flex; 
+  justify-content:flex-end;
+ }
+
+ .nav-list li {
   height: inherit;
   display: flex;
-  align-items: center;  
-  column-gap: 10px;
+  align-items: center;    
 }
 
 .nav-btn {  
-  font-size: 14px;
-  line-height: 4;
   height: inherit;
-  /* padding-top: 10px; */
-  /* background-color: yellow; */
+  font-size: 14px;
+  line-height: 4;  
+  background-color: yellow;
   transition: color 0.4s linear; 
 }
 
