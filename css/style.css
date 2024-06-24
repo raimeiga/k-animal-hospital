@@ -107,6 +107,8 @@ header {
  position: relative;  
  /* 子要素どうしが重なるので、親にposition: relativeを指定 */
  /* display: flex;  */
+ display: flex;
+ align-items: center;
  }
 
 .caption-mid {
@@ -114,7 +116,8 @@ header {
   position: absolute;  
   z-index: 11;  
   padding: 22px 3.2% 22px 9.2%;
-  margin-block: 152px 138px ;  
+  /* margin-block: 152px 138px ;   */
+  
 }
  /* 重ねる要素にはposition: absolute;を指定（親にrelative） */
 
