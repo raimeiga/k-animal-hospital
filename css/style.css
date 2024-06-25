@@ -137,10 +137,11 @@ header {
  line-height: 1.5;
 }
 
-/* greeting */
-#greeting {
+/* greet */
+#greet {
   margin-block: 63px 58px;
   background-color: yellow;
+  display: grit;
   row-gap: 15px;
 }
 
@@ -153,15 +154,23 @@ header {
   margin-inline: auto;  
 }
 
-#greeting-title {
+.greet-container {
+  position: relative;
+}
+
+.greet-text {
+  position: absolute;
+  z-index: 13;
+}
+
+#greet-01 {
   text-align: center;
  font-size: 30px;
  line-height: 1.66;
- /* margin-inline: auto;  */
  margin: 0 auto 15px;
 }
 
-#greeting-sentence {
+#greet-02 {
   text-align: center;
  font-size: 18px;
  line-height: 1.83;
@@ -169,20 +178,25 @@ header {
 }
 
 @media screen and (max-width: 905px) {
-  #greeting-sentence {
+  #greet-02 {
     text-align:left;
   }
-  #greeting-sentence > br {
+  #greet-02 > br {
    display: none;
   }
 }
 
-#rogo-3footmarks {
+.three-foot-wrap { 
+ position: absolute;
+ z-index: 14;
+}
+
+#three-foot-marks {
   width: 83.75px;
   height: 77.12px;
   position: absolute;
-  top:722.99px;
-  left: 920px;
+  top:173px;
+  right: 76px;
 }
 
 /* about（強み） */
@@ -201,7 +215,6 @@ header {
   font-size: 25px;
   line-height: 1.448;
 }
-
 
 .title::before,
 .title::after {
