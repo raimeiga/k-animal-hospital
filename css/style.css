@@ -23,7 +23,9 @@ picture img {
  width: 100%;
 }
 
-/* ヘッダー */
+/* -----------------
+header
+--------------------*/
 header {
   height: 50px;  
 }
@@ -51,7 +53,7 @@ header {
  
  .header-rogo-name > h1:before {
   content: " ";
-  background-image: url(../images/足跡_1.jpg);
+  background-image: url(../images/足跡_1.svg);
   background-size: contain;
   vertical-align: middle;
   display: inline-block;
@@ -102,7 +104,9 @@ header {
   color:#00AAEE;
 }
 
-/* main */
+/* -----------------
+main 
+--------------------*/
 #main-visual{
  position: relative;  
  /* 子要素どうしが重なるので、親にposition: relativeを指定 */
@@ -111,62 +115,64 @@ header {
  align-items: center;
  }
 
-.caption-mid {
+ .caption-white-box {  
   background-color: rgba(255, 255, 255, 0.702);
-  position: absolute;  
-  z-index: 11;  
-  padding: 22px 3.2% 22px 9.2%;
-  /* margin-block: 152px 138px ;   */
-  
+  position: absolute;
+  padding: 23px 3.3% 23px 9.3%; 
+  margin-top: 13px;
 }
- /* 重ねる要素にはposition: absolute;を指定（親にrelative） */
 
-.caption-sm {
-  width: 72.76%;
-  /* padding: 23px 7.1% 23px 20.3%; */
-}
+/* z-index;がなくてもOKな理由て何？*/
 
 #caption-1 {
   font-size: 25px; 
-  line-height: 1.44; 
+  line-height: 1.44;   
+  padding-block: 0px 10px;
 }
 
 #caption-2 {
-  color: #0D96A0;
+ color: #0D96A0;
  font-size: 40px;
- line-height: 1.5;
-}
+ line-height: 1.5; 
+} 
 
-/* greet */
+/* -----------------
+greet
+--------------------*/
+
 #greet {
   padding-block: 63px 58px;
   background-color: yellow;
-  /* display: grit;
-  row-gap: 15px; */
   position: relative;
 }
 
-
 .inner{ 
-  display: block;
   max-width: 960px;
-  /* 960pxはpaddin:40px;ずつ含めて */
-   width: 100%;
-   padding-inline: 40px;
-   margin-inline: auto;  
+  /* 960pxはpadding:40px;ずつ含めて */
+  width: 100%;
+  padding-inline: 40px;
+  margin-inline: auto;  
  }
 
  .greet-inner{
   position: relative; 
 }
 
-.greet-container {
-  position: relative;
+.three-foot-wrap { 
+  position: absolute;
+  bottom: -23px;
+  right: 2%;
+  /* transform: translateX(-50%); 調整時にいったん設定*/
+  width: 84px;
 }
 
-.greet-text {
-  /* position: absolute;
-  z-index: 13; */
+#three-foot-marks {
+  width: 83.75px;
+  height: 77.12px;  
+}
+
+.greet-container {
+  /* position: relative; */
 }
 
 #greet-01 {
@@ -192,21 +198,7 @@ header {
   }
 }
 
-.three-foot-wrap { 
- position: absolute;
-  bottom:0px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 84px;
-}
-/* 4点セット */
 
-#three-foot-marks {
-  width: 83.75px;
-  height: 77.12px;
-  /* position: absolute; */
-  
-}
 
 /* about（強み） */
 #about {
@@ -228,7 +220,7 @@ header {
 .title::before,
 .title::after {
   content: " ";
-  background-image: url(../images/足跡_1.jpg);
+  background-image: url(../images/足跡_1.svg);
   background-size: contain;
   vertical-align: middle;
   display: inline-block;
