@@ -32,9 +32,7 @@ header {
 
 .header-inner {  
   height: inherit;
-  display: flex;
-    /* justify-content: space-between; */
-  /* column-gap: 36%; */
+  display: flex;    
   align-items: center;
   max-width: 1000px;  
   width: 100%;
@@ -42,16 +40,41 @@ header {
   margin-inline: auto;  
  }
 
-.header-rogo-name {
+@media screen and (max-width: 767px) {
+  .header-inner {  
+    /* height: inherit;
+    display: flex;    
+    align-items: center; */
+    /* max-width: 700px;  
+    width: 100%; */
+    padding-inline: 20px 20px;
+    /* margin-inline: auto;   */
+   }
+}
+
+.header-logo-name {
   width: 40%;  
 }
 
-.header-rogo-name > h1 {  
+@media screen and (max-width: 767px) {
+  .header-logo-name {
+    width: 100%;  
+  }  
+}
+
+.header-logo-name > h1 {  
   font-size: 18px;
   line-height: 1.83;
  }
+
+@media screen and (max-width: 767px) {
+ .header-logo-name > h1 {  
+   font-size: 20px;
+   line-height: 1.65;
+  }
+}
  
- .header-rogo-name > h1:before {
+ .header-logo-name > h1:before {
   content: " ";
   background-image: url(../images/足跡_1.svg);
   background-size: contain;
@@ -62,19 +85,18 @@ header {
   margin-right: 9.5px;  
  }
 
-/* .header-nav-wrap {
-  width: 60%;
-  height: inherit;  
-  display: flex; 
-  justify-content:flex-end;
-} */
-
 .header-nav {
   /* width: 67.39%; */
   width: 60%;
   height: inherit;  
   display: flex; 
   justify-content:flex-end;  
+}
+
+@media screen and (max-width: 767px) {
+  .header-nav {
+   display: none;
+  }  
 }
 
 .header-nav-list {
@@ -121,20 +143,47 @@ main
   padding: 23px 3.3% 23px 9.3%; 
   margin-top: 13px;
 }
+/* ↑ z-index;がなくてもOKな理由て何だろ？*/
 
-/* z-index;がなくてもOKな理由て何？*/
+@media screen and (max-width: 767px) {
+  .caption-white-box {      
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 18px 6.1% 12px 5.3%; 
+    margin-top: 0px;
+  }
+}
 
 #caption-1 {
-  font-size: 25px; 
-  line-height: 1.44;   
-  padding-block: 0px 10px;
+  color: #0D96A0;
+ font-size: 25px;
+ line-height: 1.44; 
+ padding-block: 0px 10px;
+}
+
+@media screen and (max-width: 767px) {
+  #caption-1 {
+  font-size: 20px; 
+  line-height: 1.45;  
+  padding-block: 0px 7px;
+  }
 }
 
 #caption-2 {
+  color: #0D96A0;
+  font-size: 40px;
+  line-height: 1.5; 
+  } 
+
+@media screen and (max-width: 767px) {
+#caption-2 {
  color: #0D96A0;
- font-size: 40px;
- line-height: 1.5; 
-} 
+ font-size: 30px;
+ line-height: 1.33; 
+ } 
+}
+
 
 /* -----------------
 greet
@@ -153,6 +202,14 @@ greet
   padding-inline: 40px;
   margin-inline: auto;  
  }
+
+ @media screen and (max-width: 767px) {
+  .inner{ 
+   width: 100%;
+   padding-inline: 40px;
+   margin-inline: auto;  
+ } 
+}
 
  .greet-inner{
   position: relative; 
@@ -182,12 +239,17 @@ greet
  margin: 0 auto 15px;
 }
 
+@media screen and (max-width: 767px) {
+
+}
+
 #greet-02 {
-  text-align: center;
+ text-align: center;
  font-size: 18px;
  line-height: 1.83;
  margin-inline: auto; 
 }
+
 
 @media screen and (max-width: 905px) {
   #greet-02 {
@@ -383,6 +445,12 @@ greet
 
 .info-font-18 {
   font-size: 18px;
+}
+
+@media screen and (max-width: 767px) {
+  .info-font-18 {
+    font-size: 16px;
+  }
 }
 
 .info-font-18 > span {
