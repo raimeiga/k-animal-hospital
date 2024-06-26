@@ -72,14 +72,17 @@
 <section id="greet">
   <!-- ↓ class2つにしてある -->
   <div class="inner greet-inner">  
-    <div class="three-foot-wrap">        
-      <img id="three-foot-marks" src="./images/足跡_2.svg" alt="">     
-    </div>
+    <!-- <div class="three-foot-wrap">         -->
+    <picture  class="three-foot-wrap">
+       <source media="(max-width:375px)" srcset="./images/足跡_2_sp.svg">
+       <img id="three-foot-marks" src="./images/足跡_2.svg" alt=""> 
+    </picture>
+    <!-- </div> -->
     <div class="greet-container">
         <div class="greet-text">
           <div class="greet-01-wrap">
               <h2 id="greet-01">
-                動物たちの健康で<span class="u-ib">幸せな生活をサポート</span>
+                動物たちの健康で<span class="u-ib-619">幸せな生活をサポート</span>
               </h2>
           </div>
           <div class="greet-02-wrap">
@@ -157,10 +160,9 @@
     <div class="service-wrap">
       <div class="service-list">
         <picture class="service-img-wrap">
-            <source media="(max-width:767px)" srcset="./images/about_01_sp.jpg">
+            <source media="(max-width:375px)" srcset="./images/service_01_sp.jpg">
             <img src="./images/service_01.jpg" alt="">
         </picture>
-        
         <div class="service-text-wrap">
           <div>
               <h3 class="service-title">往診サービス</h3>
@@ -173,10 +175,9 @@
        
       <div class="service-list">
         <picture class="service-img-wrap">
-            <source media="(max-width:767px)" srcset="./images/about_02_sp.jpg">
+            <source media="(max-width:375px)" srcset="./images/service_02_sp.jpg">
             <img src="./images/service_02.jpg" alt="">
-        </picture>
-        
+        </picture>        
         <div class="service-text-wrap">
           <div>
               <h3 class="service-title">ペットホテル</h3>
@@ -188,10 +189,9 @@
       </div>      
       <div class="service-list">
         <picture class="service-img-wrap">
-            <source media="(max-width:767px)" srcset="./images/about_03_sp.jpg">
+            <source media="(max-width:375px)" srcset="./images/service_03_sp.jpg">
             <img src="./images/service_03.jpg" alt="">
         </picture>
-        
         <div class="service-text-wrap">
           <div>
               <h3 class="service-title">トリミング</h3>
@@ -210,7 +210,7 @@
     <div class="title-wrap">           
         <h2 class="title">お知らせ</h2>
     </div>
-    <div class="news-wrap">
+    <div class="news-wrap">      
       <div class="news-item">
         <a href="">
           <p class="date">0000.00.00</p>
@@ -250,10 +250,8 @@
           <p class="news-article">当院開院11周年を迎えることとなりました。</p>
         </a>
       </div>     
-
     </div>
-  </div>
-    
+  </div>    
 </section>
 
 <section id="access"> 
