@@ -139,19 +139,25 @@ header {
 
 /* greet */
 #greet {
-  margin-block: 63px 58px;
+  padding-block: 63px 58px;
   background-color: yellow;
-  display: grit;
-  row-gap: 15px;
+  /* display: grit;
+  row-gap: 15px; */
+  position: relative;
 }
 
-.inner{
- display: block;
- max-width: 960px;
- /* 960pxはpaddin:40px;ずつ含めて */
-  width: 100%;
-  padding-inline: 40px;
-  margin-inline: auto;  
+
+.inner{ 
+  display: block;
+  max-width: 960px;
+  /* 960pxはpaddin:40px;ずつ含めて */
+   width: 100%;
+   padding-inline: 40px;
+   margin-inline: auto;  
+ }
+
+ .greet-inner{
+  position: relative; 
 }
 
 .greet-container {
@@ -159,8 +165,8 @@ header {
 }
 
 .greet-text {
-  position: absolute;
-  z-index: 13;
+  /* position: absolute;
+  z-index: 13; */
 }
 
 #greet-01 {
@@ -188,15 +194,18 @@ header {
 
 .three-foot-wrap { 
  position: absolute;
- z-index: 14;
+  bottom:0px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 84px;
 }
+/* 4点セット */
 
 #three-foot-marks {
   width: 83.75px;
   height: 77.12px;
-  position: absolute;
-  top:173px;
-  right: 76px;
+  /* position: absolute; */
+  
 }
 
 /* about（強み） */
