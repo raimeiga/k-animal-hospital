@@ -286,6 +286,13 @@ greet
  margin: 0 auto 15px;
 }
 
+#greet-02 {
+ text-align: center;
+ font-size: 18px;
+ line-height: 1.83;
+ margin-inline: auto; 
+}
+
 @media screen and (max-width: 375px) {
   #greet-01 {
    font-size: 25px;
@@ -298,14 +305,6 @@ greet
    }
 }
 
-#greet-02 {
- text-align: center;
- font-size: 18px;
- line-height: 1.83;
- margin-inline: auto; 
-}
-
-
 @media screen and (max-width: 905px) {
   #greet-02 {
     text-align:left;
@@ -314,6 +313,7 @@ greet
    display: none;
   }
 }
+
 
 
 /* -----------------
