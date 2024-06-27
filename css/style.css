@@ -832,8 +832,7 @@ contact（お問い合わせ）
   .contact-textbox {
     width: 100%;
     height: 50px;
-    /* padding-inline: 10px; */
-    background-color: yellow;
+    /* padding-inline: 10px; */    
     border: none;
    }
 } 
@@ -878,10 +877,15 @@ contact（お問い合わせ）
 footer {
   height: 280px;
   /* padding-block: 45px 70px; */
-  padding-block: 48px 70px;
+  padding-block: 43px 70px;
   background-color: #505050; 
   color: #fff;
 }
+@media screen and (max-width: 375px) {
+  footer {    
+    padding-block: 45px 50px;
+  }
+} 
 
 .footer-wrap {
   width: 100%;
@@ -894,9 +898,14 @@ footer {
   width: 68.6%;
   /* 幅はpxでいうと604px */   
   text-align: center; 
-  margin-inline: auto; 
-  
+  margin-inline: auto;   
 }
+@media screen and (max-width: 375px) {
+  .footer-nav {
+    width: 100%;    
+ }
+} 
+
 
 .footer-nav-list {
   width: 100%;  
@@ -906,6 +915,26 @@ footer {
   /* padding-block: 21px; */
   padding-block: 21px 19px;
  }
+ @media screen and (max-width: 375px) {
+  /* .footer-nav-list {
+    display: none;  
+   }  
+  .footer-nav-list-sp {
+    width: 100%;      
+    padding-block: 21px 19px;
+    display: flex;
+    justify-content: center;
+    column-gap: 5.3%;
+  } */
+  .footer-nav-list {
+    width: 100%;  
+    flex-wrap: wrap;
+    display: flex; 
+    column-gap: 5.3%;   
+    justify-content: center; 
+    padding-block: 4px 16px;
+   }
+}
  
  .footer-nav-btn {
   font-size: 20px;
@@ -913,6 +942,13 @@ footer {
   padding-block: 21px;
   transition: color 0.4s linear; 
  }
+ @media screen and (max-width: 375px) {
+  .footer-nav-btn {
+    font-size: 18px;
+    line-height: 1.83;
+    padding-block: 10px;    
+   }
+} 
 
  .footer-nav-btn:hover {
    color: #00AAEE;
@@ -924,24 +960,38 @@ footer {
   background-color: #fff;
   margin-inline: auto;  
  }
+ @media screen and (max-width: 375px) {
+  .line {
+    width: 100%;    
+   }
+} 
 
- .copy-right {
-  width: 53.5%;
-  margin-inline: auto;
+ .copy-right {  
   padding-block: 27px 8px;
  }
+ @media screen and (max-width: 375px) {
+  .copy-right {    
+    padding-block: 18px 26px;
+   }
+} 
 
  .copy-right > p {
   font-size: 20px;
   line-height: 1.65;
  }
+ @media screen and (max-width: 375px) {
+  .copy-right > p {
+    font-size: 16px;
+    line-height: 2.06;
+   }
+} 
 
  .favicon {
-  width: 13.8%;
   display: flex;
-  column-gap: 12px;
-  /* background-color: yellow; */
+  justify-content: center;
+  column-gap: 12px;  
   margin-inline: auto;
  }
+
  
 
