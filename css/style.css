@@ -269,14 +269,12 @@ greet
   padding-inline: 40px;
   margin-inline: auto;  
  }
-
  @media screen and (max-width: 880px) {
   .inner{ 
    width: 100%;
    padding-inline: 40px;
  } 
 }
-
 @media screen and (max-width: 375px) {
   .inner{ 
    width: 100%;
@@ -664,7 +662,7 @@ access（アクセス）
 #access {
   padding-block: 63px 67px;  
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 767px) {
   #access {
     padding-block: 44px 50px;  
   }
@@ -684,12 +682,16 @@ access（アクセス）
 
 .access-wrap > iframe {
   width: 50%;
-  height: 300px
+  height: 300px;
 }
 @media screen and (max-width: 767px) {
   .access-wrap > iframe {
-    width: 100%;
-    height:222px
+    width: 100%;    
+  }
+}
+@media screen and (max-width: 413px) {
+  .access-wrap > iframe {
+    height: 222px;
   }
 }
 
@@ -712,7 +714,7 @@ access（アクセス）
 .info-font-size {
   font-size: 18px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 767px) {
   .info-font-size {
     font-size: 16px;
   }
@@ -722,17 +724,7 @@ access（アクセス）
   margin-bottom: 14px;
   line-height: 1.5;  
 }
-#info-address > br {
-  display: none;
- }
-
-@media screen and (max-width: 514px) {
-  #info-address > br {
-  display: block;
- }
-}
-
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 767px) {
   #info-address {
     font-size: 16px;    
     line-height: 1.5;
@@ -740,11 +732,24 @@ access（アクセス）
   }
 }
 
+@media screen and (min-width: 867px) {
+  #info-address > br {
+  display: none;
+ }
+}
+
+/* @media screen and (min-width: 414px)  */
+@media (min-width: 414px) and (max-width: 767px) {
+  #info-address > br {
+  display: none;
+ }
+}
+
 #info-tel {
   line-height: 1.5; 
   margin-bottom: 8px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 767px) {
   #info-tel {   
     font-size: 16px;    
     line-height: 1.68;
@@ -752,9 +757,9 @@ access（アクセス）
   }
 }
 
-.info-tel > span {
+#info-tel > span {
   font-size: 25px;
-  line-height: 1.6;  
+  line-height: 1.6; 
 }
 
 #info-mail {  
@@ -763,7 +768,7 @@ access（アクセス）
   margin-bottom: 26px;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 767px) {
   #info-mail {    
     font-size: 16px;   
     line-height: 1.5; 
@@ -777,7 +782,7 @@ access（アクセス）
   border-top: solid 1px #707070;
   border-bottom: solid 1px #707070;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 767px) {
   .access-info-wrap > div > p {  
     font-size: 16px;   
     line-height: 1.87; 
@@ -952,6 +957,14 @@ footer {
   }
 } 
 
+@media screen and (max-width: 683px) {
+.footer-inner {
+  width: 100%;
+  padding-inline: 30px;
+  margin-inline: auto;  
+ }
+}
+
 .footer-wrap {
   width: 100%;
   /* 880px */ 
@@ -959,11 +972,11 @@ footer {
   /* 子要素をセンタリング */
 }
 
-.footer-nav {    
-  text-align: center; 
-  margin-inline: auto;   
+.footer-nav {      
+  display: flex;     
+  justify-content: center;   
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 683px) {
   .footer-nav {
     width: 100%;    
  }
@@ -976,7 +989,7 @@ footer {
    justify-content: center;  
   padding-block: 21px 19px;
  }
- @media screen and (max-width: 375px) {  
+ @media screen and (max-width: 683px) {  
   .footer-nav-list {
     width: 100%;  
     flex-wrap: wrap;
@@ -993,7 +1006,7 @@ footer {
   padding-block: 21px;
   transition: color 0.4s linear; 
  }
- @media screen and (max-width: 375px) {
+ @media screen and (max-width: 683px) {
   .footer-nav-btn {
     font-size: 18px;
     line-height: 1.83;
@@ -1006,15 +1019,16 @@ footer {
  }
 
 .line {
-  width: 84%; 
+  max-width: 737px;
+  width: 100%; 
   height: 1px; 
   background-color: #fff;
   margin-inline: auto;  
   text-align: center;
  }
- @media screen and (max-width: 902px) {
+ @media screen and (max-width: 683px) {
   .line {
-    width: 87%; 
+    width: 100%; 
    }
 } 
  @media screen and (max-width: 375px) {
@@ -1026,7 +1040,7 @@ footer {
  .copy-right {  
   padding-block: 27px 8px;
  }
- @media screen and (max-width: 375px) {
+ @media screen and (max-width: 683px) {
   .copy-right {    
     padding-block: 18px 26px;
    }
@@ -1036,7 +1050,7 @@ footer {
   font-size: 20px;
   line-height: 1.65;
  }
- @media screen and (max-width: 375px) {
+ @media screen and (max-width: 683px) {
   .copy-right > p {
     font-size: 16px;
     line-height: 2.06;
