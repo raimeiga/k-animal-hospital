@@ -30,22 +30,31 @@ header {
   height: 50px;  
 }
 
-.header-inner {  
-  height: inherit;
-  display: flex;    
-  justify-content: space-between;
-  align-items: center;
-  
-  max-width: 1000px;  
+.header-inner {   
+  max-width: 1080px;  
   width: 100%;
-  padding-inline: 60px 20px;
+  height: inherit;
+  padding-inline: 100px 60px;
   margin-inline: auto;  
- }
+  display: flex;    
+   justify-content: space-between;
+   align-items: center;  
+}
+ @media screen and (max-width: 925px) {
+  .header-inner {      
+   padding-inline: 60px 40px;           
+  }
+}
 @media screen and (max-width: 767px) {
   .header-inner {      
-   padding-inline: 40px 20px;    
+   padding-inline: 40px 20px;
    display: flex;    
-   justify-content: center;
+    justify-content: left;      
+  }
+}
+@media screen and (max-width: 375px) {
+  .header-inner {      
+   padding-inline: 20px 20px;   
   }
 }
 
@@ -277,6 +286,7 @@ greet(ご挨拶)
    padding-inline: 20px;
  } 
 }
+
  .greet-inner{
   position: relative; 
 }
@@ -350,11 +360,9 @@ about（強み）
 --------------------*/
 
 #about {
-  background-color: rgba(13, 150, 160, 0.102);
-  /* background-color: #000; */
+  background-color: rgba(13, 150, 160, 0.102);  
   padding-block: 64px 62px;
 }
-
 @media screen and (max-width: 879px)  {
   #about {
    padding-block: 53px 34px;
@@ -388,7 +396,6 @@ about（強み）
  display: grid;
  row-gap: 46.5px;
 }
-
 @media screen and (max-width: 879px) {
   .about-wrap {
     padding-top: 40px;
@@ -401,7 +408,6 @@ about（強み）
   display: flex;
   column-gap: 44px;
 }
-
 @media screen and (max-width: 879px) {
   .about-list {
     display: flex;
@@ -419,9 +425,16 @@ about（強み）
   display: grid;
   row-gap: 20px;
   width: 45%;
-  text-align: left;
-  /* margin-block: 55px; */
+  text-align: left; 
   margin-block: 50px;
+}
+@media screen and (max-width: 879px) {
+  .about-text-wrap{    
+    display: grid;
+    row-gap: 5px;
+    width: 100%;    
+    margin-block: 0px;
+  } 
 }
 
 .about-title {
@@ -429,47 +442,45 @@ about（強み）
   font-size: 22px;
   line-height: 1.5;
 }
+@media screen and (max-width: 879px) {
+  .about-title {       
+    font-size: 20px;    
+    text-align: center;
+    padding-block: 26px 3px;
+    margin-inline: auto; 
+  }  
+}
+
+@media screen and (max-width: 437px) {
+  .u-ib {
+    display: inline-block;
+  }
+ }
+
 .about-detail {
   width: 100%;
   font-size: 18px;
   line-height: 1.83;
 }
-.about-img-wrap{
-  width: 50%;
-}
-
 @media screen and (max-width: 879px) {
-  .about-text-wrap{    
-    display: grid;
-    row-gap: 5px;
-    width: 100%;    
-    margin-block: 0px;
-  }  
-  .about-title {   
-    /* width: 65%; */
-    font-size: 20px;
-    line-height: 1.5;
-    text-align: center;
-    padding-block: 26px 3px;
-    margin-inline: auto; 
-  }  
-  .about-detail {    
-    /* width: 65%; */
+  .about-detail {        
     text-align:left;
     margin-inline: auto; 
     font-size: 16px;
     line-height: 1.875;
-  }  
+  } 
+} 
+
+.about-img-wrap{
+  width: 50%;
+}
+@media screen and (max-width: 879px) {
   .about-img-wrap{
     width: 100%;
   }
 } 
 
-@media screen and (max-width: 437px) {
- .u-ib {
-   display: inline-block;
- }
-}
+
 
 /* -----------------
 service（サービス）
@@ -544,7 +555,7 @@ service（サービス）
     text-align: center;
   }
  }
- @media screen and (max-width: 572px) {
+ @media screen and (max-width: 587px) {
   .service-detail {
     font-size: 16px;
     line-height: 1.875;
@@ -569,12 +580,6 @@ news（お知らせ）
  .news-wrap {
   margin-top: 44px;
   border-top: solid 1px #707070;
-}
-
-@media screen and (max-width: 375px) {
-  .news-wrap {
-    /* margin-top: 28px;     */
- } 
 }
 
 .news-item {
@@ -612,8 +617,7 @@ news（お知らせ）
 }
 @media screen and (max-width: 767px) {
   .date {    
-    padding: 28px 0px 2px 0px; 
-    transition: color 0.5s ease-in; 
+    padding: 28px 0px 0px 0px;    
   }  
 }
 
@@ -627,10 +631,8 @@ news（お知らせ）
 }
 @media screen and (max-width: 767px) {
   .news-headline {  
-    width: 100%;
-    color: #0D96A0;        
-    padding: 2px 0px 6px 0px;  
-    transition: color 0.5s ease-in; 
+    width: 100%;      
+    padding: 2px 0px 6px 0px;      
   }
 }
 
@@ -647,8 +649,7 @@ news（お知らせ）
     width: 100%;
     font-size: 16px;
     line-height: 1.5;    
-    padding: 0px 0px 26px 0px;  
-    transition: color 0.5s ease-in; 
+    padding: 0px 0px 26px 0px;      
   }  
 }
 
@@ -664,6 +665,14 @@ access（アクセス）
     padding-block: 44px 50px;  
   }
 }
+
+@media screen and (max-width: 413px) {
+  .access-inner {  
+   width: 100%;
+   padding-inline: 20px;
+   margin-inline: auto;  
+  }
+ }
 
 .access-wrap {  
   display: flex;
@@ -729,18 +738,17 @@ access（アクセス）
   }
 }
 
-@media screen and (min-width: 867px) {
-  #info-address > br {
-  display: none;
+@media (min-width: 768px) and (max-width: 928px) {
+  .info-ib {
+  display: block;
  }
+}
+@media screen and (max-width: 374px) {
+  .info-ib {
+    display: block;
+   }
 }
 
-/* @media screen and (min-width: 414px)  */
-@media (min-width: 414px) and (max-width: 767px) {
-  #info-address > br {
-  display: none;
- }
-}
 
 #info-tel {
   line-height: 1.5; 
@@ -761,7 +769,7 @@ access（アクセス）
 }
 
 #info-mail {  
-  font-size: 16px;    
+  font-size: 18px;    
   line-height: 1.5; 
   margin-bottom: 26px;
 }
@@ -774,14 +782,14 @@ access（アクセス）
   }
 }
 
-.access-info-wrap > div > p {
+#info-time-closed {
   line-height: 2.22;
   padding-block: 15px 12px;  
   border-top: solid 1px #707070;
   border-bottom: solid 1px #707070;
 }
 @media screen and (max-width: 767px) {
-  .access-info-wrap > div > p {  
+  #info-time-closed {  
     font-size: 16px;   
     line-height: 1.87; 
     padding-block: 12px;    
@@ -834,7 +842,7 @@ contact（お問い合わせ）
 @media screen and (max-width: 375px) {
   .form-wrap {
     display: grid;
-    row-gap: 17px;
+    row-gap: 19px;
   }
 } 
 
@@ -914,7 +922,7 @@ contact（お問い合わせ）
  @media screen and (max-width: 767px) {
   .submit-btn-wrap {    
     width: 100%;
-    padding-block: 8px 5px;    
+    padding-block: 11px 4px;    
    }
 } 
 
@@ -922,7 +930,7 @@ contact（お問い合わせ）
   color: #fff;
   font-size: 25px; 
   line-height: 1.32;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.1em;  
 }
 @media screen and (max-width: 375px) {
   .submit-btn {      
@@ -945,14 +953,14 @@ footer {
 }
 @media screen and (max-width: 375px) {
   footer {    
-    padding-block: 45px 50px;
+    padding-block: 43px 50px;
   }
 } 
 
 @media screen and (max-width: 683px) {
 .footer-inner {
   width: 100%;
-  padding-inline: 30px;
+  padding-inline: 20px;
   margin-inline: auto;  
  }
 }
@@ -968,11 +976,6 @@ footer {
   display: flex;     
   justify-content: center;   
 }
-@media screen and (max-width: 683px) {
-  .footer-nav {
-    width: 100%;    
- }
-} 
 
 .footer-nav-list {
   width: 100%;  
@@ -986,9 +989,9 @@ footer {
     width: 100%;  
     flex-wrap: wrap;
     display: flex; 
-     column-gap: 5.3%;    
+     column-gap: 6.1%;    
      justify-content: center;     
-    padding-block: 4px 16px;
+    padding-block: 4px 18px;
    }
 }
  
@@ -1048,6 +1051,15 @@ footer {
     line-height: 2.06;
    }
 } 
+@media screen and (max-width: 342px) {
+  .copy-right > p {
+    font-size: 14px;    
+   }
+} 
+
+
+
+
 
  .favicon {
   display: flex;
