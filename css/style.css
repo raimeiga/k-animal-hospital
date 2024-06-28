@@ -58,15 +58,6 @@ header {
   }
 }
 
-.header-logo-name {
-  /* width: 40%;   */
-}
-@media screen and (max-width: 767px) {
-  .header-logo-name {
-    /* width: 100%;   */
-  }  
-}
-
 .header-logo-name > h1 {  
   font-size: 18px;
   line-height: 1.83;
@@ -128,10 +119,9 @@ header {
 main 
 --------------------*/
 
+/* ↓子要素どうしが重なるので、親にposition: relativeを指定 */
 #main-visual{
  position: relative;  
- /* 子要素どうしが重なるので、親にposition: relativeを指定 */
- /* display: flex;  */
  display: flex;
  align-items: center;
  }
@@ -179,7 +169,6 @@ main
   line-height: 1.44; 
   padding-block: 0px 10px;
 }
-
 @media screen and (max-width: 879px) {
 #caption-1 {  
   font-size: 23px;
@@ -187,7 +176,6 @@ main
   padding-block: 0px 10px;
   }
 }
-
 @media screen and (max-width: 739px) {
   #caption-1 {    
     font-size: 21px;
@@ -195,15 +183,13 @@ main
     padding-block: 0px 10px;
     }
   }
-
 @media screen and (max-width: 620px) {
    #caption-1 {      
       font-size: 29px;
       line-height: 1.45; 
       padding-block: 0px 10px;
      }
-  }
-  
+  }  
 @media screen and (max-width: 475px) {
   #caption-1 {
   font-size: 20px; 
@@ -217,7 +203,6 @@ main
   font-size: 40px;
   line-height: 1.5; 
   } 
-
 @media screen and (max-width: 879px) {
   #caption-2 {
     color: #0D96A0;
@@ -225,7 +210,6 @@ main
     line-height: 1.5; 
   } 
 }
-
 @media screen and (max-width: 739px) {
   #caption-2 {
     color: #0D96A0;
@@ -233,7 +217,6 @@ main
     line-height: 1.5; 
   } 
 }
-
 @media screen and (max-width: 620px) {
   #caption-2 {
     color: #0D96A0;
@@ -241,7 +224,6 @@ main
     line-height: 1.5; 
   } 
 }
-
 @media screen and (max-width: 475px) {
 #caption-2 {
  color: #0D96A0;
@@ -260,7 +242,6 @@ greet(ご挨拶)
   /* background-color: yellow; */
   position: relative;
 }
-
 @media screen and (max-width: 375px) {
   #greet {
     padding-block: 49px 40px;
@@ -315,14 +296,7 @@ greet(ご挨拶)
  line-height: 1.66;
  margin: 0 auto 15px;
 }
-
-@media screen and (max-width: 619px) {
-  .u-ib-619 {
-    display: inline-block;
-  }
- }
-
- @media screen and (max-width: 379px) {
+@media screen and (max-width: 379px) {
   #greet-01 {
    font-size: 25px;
    line-height: 1.4;
@@ -330,13 +304,18 @@ greet(ご挨拶)
   }
 }
 
+@media screen and (max-width: 619px) {
+  .u-ib-619 {
+    display: inline-block;
+  }
+ }
+
 #greet-02 {
  text-align: center;
  font-size: 18px;
  line-height: 1.83;
  margin-inline: auto; 
 }
-
 @media (min-width: 376px) and (max-width: 905px){
   #greet-02 {
     text-align:left;
@@ -345,7 +324,6 @@ greet(ご挨拶)
    display: none;
   }
 }
-
 @media screen and (max-width: 375px) {
   #greet-02 {
     text-align: left;
@@ -373,6 +351,7 @@ about（強み）
   display: flex;
   justify-content: center;  
 }
+
 .title {  
   margin: 0 20px;  
   font-size: 25px;
@@ -481,7 +460,6 @@ about（強み）
 } 
 
 
-
 /* -----------------
 service（サービス）
 --------------------*/
@@ -489,7 +467,6 @@ service（サービス）
 #service {
   padding-block: 65px 59px;
 }
-
 @media screen and (max-width: 375px) {
   #service {
   padding-block: 45px 39px;
@@ -501,7 +478,6 @@ service（サービス）
   display: flex;
   column-gap: 50px;  
 }
-
 @media screen and (max-width: 767px) {
   .service-wrap {
     margin-top: 45px;
@@ -517,7 +493,6 @@ service（サービス）
  display: grid;
  row-gap: 19px; 
 }
-
 @media screen and (max-width: 767px) {
   .service-list {
     width: 100%;    
@@ -530,7 +505,6 @@ service（サービス）
   display: grid;
   row-gap: 8px; 
 }
-
 @media screen and (max-width: 375px) {
   .service-text-wrap {
     display: grid;
@@ -555,22 +529,22 @@ service（サービス）
     text-align: center;
   }
  }
- @media screen and (max-width: 587px) {
+@media screen and (max-width: 587px) {
   .service-detail {
     font-size: 16px;
     line-height: 1.875;
     text-align: left;
-  }
  }
+}
 
 /* -----------------
 news（お知らせ）
 --------------------*/
+
 #news {
   background-color: rgba(13, 150, 160, 0.102);
   padding-block: 63px 68px;
 }
-
 @media screen and (max-width: 375px) {
   #news {
     padding-block: 42px 49px;
@@ -773,7 +747,6 @@ access（アクセス）
   line-height: 1.5; 
   margin-bottom: 26px;
 }
-
 @media screen and (max-width: 767px) {
   #info-mail {    
     font-size: 16px;   
@@ -885,8 +858,7 @@ contact（お問い合わせ）
  padding-inline: 10px;
  background-color: #fff;
  border: none;
-}
- 
+} 
 @media screen and (max-width: 959px) {
   .contact-textbox {
     width: 70%;
@@ -1021,7 +993,7 @@ footer {
   margin-inline: auto;  
   text-align: center;
  }
- @media screen and (max-width: 683px) {
+@media screen and (max-width: 683px) {
   .line {
     width: 100%; 
    }
@@ -1050,16 +1022,12 @@ footer {
     font-size: 16px;
     line-height: 2.06;
    }
-} 
-@media screen and (max-width: 342px) {
+ } 
+ @media screen and (max-width: 342px) {
   .copy-right > p {
     font-size: 14px;    
    }
-} 
-
-
-
-
+ } 
 
  .favicon {
   display: flex;
