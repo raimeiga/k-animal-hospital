@@ -107,7 +107,7 @@ header {
   height: inherit;
   font-size: 14px;
   line-height: 4;  
-  background-color: yellow;
+  /* background-color: yellow; */
   transition: color 0.4s linear; 
 }
 
@@ -165,16 +165,14 @@ main
   }
 }
 
-#caption-1 {
-  color: #0D96A0;
+#caption-1 {  
   font-size: 25px;
   line-height: 1.44; 
   padding-block: 0px 10px;
 }
 
 @media screen and (max-width: 879px) {
-#caption-1 {
-  color: #0D96A0;
+#caption-1 {  
   font-size: 23px;
   line-height: 1.44; 
   padding-block: 0px 10px;
@@ -182,8 +180,7 @@ main
 }
 
 @media screen and (max-width: 739px) {
-  #caption-1 {
-    color: #0D96A0;
+  #caption-1 {    
     font-size: 21px;
     line-height: 1.45; 
     padding-block: 0px 10px;
@@ -191,8 +188,7 @@ main
   }
 
 @media screen and (max-width: 620px) {
-   #caption-1 {
-      color: #0D96A0;
+   #caption-1 {      
       font-size: 29px;
       line-height: 1.45; 
       padding-block: 0px 10px;
@@ -247,12 +243,12 @@ main
 
 
 /* -----------------
-greet
+greet(ご挨拶)
 --------------------*/
 
 #greet {
   padding-block: 63px 58px;
-  background-color: yellow;
+  /* background-color: yellow; */
   position: relative;
 }
 
@@ -303,7 +299,8 @@ greet
 }
 
 #greet-01 {
-  text-align: center;
+ color: #0D96A0;
+ text-align: center;
  font-size: 30px;
  line-height: 1.66;
  margin: 0 auto 15px;
@@ -758,6 +755,7 @@ access（アクセス）
 }
 
 #info-tel > span {
+  color: #0D96A0;
   font-size: 25px;
   line-height: 1.6; 
 }
@@ -802,7 +800,6 @@ contact（お問い合わせ）
 }
 @media screen and (max-width: 375px) {
   #contact {
-    background-color: rgba(13, 150, 160, 0.102);
     padding-block: 44px 50px;
     display: flex;  
   }
@@ -847,9 +844,7 @@ contact（お問い合わせ）
 }
 @media screen and (max-width: 767px) {
   .label-text-wrap-odd {  
-    flex-wrap: wrap; 
-    display: grit;
-    row-gap: 2px;
+    flex-wrap: wrap;    
   }
 } 
 
@@ -859,9 +854,7 @@ contact（お問い合わせ）
 }
 @media screen and (max-width: 767px) {
   .label-text-wrap-even {    
-    flex-wrap: wrap; 
-    display: grit;
-    row-gap: 2px;
+    flex-wrap: wrap;    
   }
 } 
 
@@ -927,8 +920,7 @@ contact（お問い合わせ）
 
 .submit-btn {  
   color: #fff;
-  font-size: 25px;
-  font-weight: 500px;
+  font-size: 25px; 
   line-height: 1.32;
   letter-spacing: 0.2em;
 }
