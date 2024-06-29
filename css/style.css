@@ -113,29 +113,67 @@ main
 
 /* ↓子要素どうしが重なるので、親にposition: relativeを指定 */
 #main-visual{
- position: relative;  
+ 
  /* display: flex;
  align-items: center; */
  }
 
- /* ↓z-index;がなくてもOKな理由て何だろ？*/
- /* ↓よくわからないままmarginで強引に微調整。 */
+ .caption-white-wrap {
+  position: relative;
+ }
+ @media screen and (max-width: 767px) {
+  .caption-white-wrap {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+   }
+ }
+
  .caption-white-box {  
   background-color: rgba(255, 255, 255, 0.702);
   position: absolute;
-  width: 46%;
+   top: 30.4%;   
+   left: 0px;
   padding: 23px 3.3% 23px 9.3%;  
-  margin-block: 152px 138px;  
+  display: flex;
+  align-items: center;
+  height: 210px;
+}
+@media screen and (max-width: 767px) {
+  .caption-white-box {  
+    background-color: rgba(255, 255, 255, 0.702);
+    position: absolute;  
+     top: 73%;  
+     left: 0px;
+     bottom: 0px;
+    padding: 18px 7.3% 14px 6.4%;  
+    display: flex;
+    align-items: center;    
+    height: 148px;    
+  }
 }
 
 .caption-text {
-  /* width: 100%; */
+  display: grid;
+  row-gap: 4.7%;
 }
+@media screen and (max-width: 767px) {
+  .caption-text {
+    display: grid;
+    row-gap: 7px;
+  }
+}
+
 
 #caption-1 {  
   font-size: 1.25rem;
   line-height: 1.44; 
-  padding-block: 0px 10px;
+  }
+@media screen and (max-width: 767px) {
+  #caption-1 {  
+    font-size: 1rem;
+    line-height: 1.45; 
+  }
 }
 
 #caption-2 {
@@ -143,18 +181,21 @@ main
   font-size: 2rem;
   line-height: 1.5; 
   } 
+@media screen and (max-width: 767px) {
+  #caption-2 {    
+    font-size: 1.5rem;
+    line-height: 1.33; 
+    } 
+}
 
 
 /* -----------------
 greet(ご挨拶)
 --------------------*/
-
 #greet {
-  padding-block: 63px 58px;
-  /* background-color: yellow; */
-  position: relative;
+  padding-block: 63px 58px;  
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 767px) {
   #greet {
     padding-block: 49px 40px;
   }
@@ -162,7 +203,6 @@ greet(ご挨拶)
 
 .inner{ 
   max-width: 960px;
-  /* 960pxはpadding:40px;ずつ含めて */
   width: 100%;
   padding-inline: 40px;
   margin-inline: auto;  
@@ -186,7 +226,7 @@ greet(ご挨拶)
   width: 84px;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 767px) {
   .three-foot-wrap { 
     position: absolute;
     bottom: 7px;
