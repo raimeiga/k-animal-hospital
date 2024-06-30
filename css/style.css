@@ -111,59 +111,39 @@ header {
 main 
 --------------------*/
 
-/* ↓子要素どうしが重なるので、親にposition: relativeを指定 */
-#main-visual{
- 
- /* display: flex;
- align-items: center; */
- }
-
- .caption-white-wrap {
+.main-inner {
   position: relative;
- }
- @media screen and (max-width: 767px) {
-  .caption-white-wrap {
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-   }
- }
+}
 
- .caption-white-box {  
+.caption-box-white {  
   background-color: rgba(255, 255, 255, 0.702);
+  padding: 26px 3.3% 20px 9.3%;  
   position: absolute;
-   top: 30.4%;   
-   left: 0px;
-  padding: 23px 3.3% 23px 9.3%;  
-  display: flex;
-  align-items: center;
-  height: 210px;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-47%);
 }
 @media screen and (max-width: 767px) {
-  .caption-white-box {  
-    background-color: rgba(255, 255, 255, 0.702);
-    position: absolute;  
-     top: 73%;  
-     left: 0px;
-     bottom: 0px;
-    padding: 18px 7.3% 14px 6.4%;  
-    display: flex;
-    align-items: center;    
-    height: 148px;    
+  .caption-box-white {  
+  /* background-color: yellow; */
+  padding: 18px 6.6% 14px 5.3%;    
+  position: absolute;
+   top: 50%;
+   left: 0%;
+   transform: translateY(85%);
   }
 }
 
-.caption-text {
+.caption-box{
   display: grid;
-  row-gap: 4.7%;
+  row-gap: 9px;
 }
 @media screen and (max-width: 767px) {
-  .caption-text {
+  .caption-box{
     display: grid;
-    row-gap: 7px;
+    row-gap: 8px;
   }
 }
-
 
 #caption-1 {  
   font-size: 1.25rem;
@@ -187,7 +167,6 @@ main
     line-height: 1.33; 
     } 
 }
-
 
 /* -----------------
 greet(ご挨拶)
@@ -220,17 +199,17 @@ greet(ご挨拶)
 
 .three-foot-wrap { 
   position: absolute;
-  bottom: -23px;
+  bottom: -24px;
   right: 2%;
-  /* transform: translateX(-50%); 調整時にいったん設定*/
-  width: 84px;
-}
+  transform: translateX(4%); 
+  width: 84px;}
 
 @media screen and (max-width: 767px) {
   .three-foot-wrap { 
     position: absolute;
     bottom: 7px;
     right: 8%;    
+    transform: translateX(2%); 
     width: 68px;
   }
 }
@@ -985,9 +964,7 @@ footer {
   margin-inline: auto;
  }
 
- 
 
-}
 
 .footer-nav-list {
   width: 100%;  
