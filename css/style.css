@@ -48,7 +48,7 @@ header {
 }
 
 .header-logo-name {
-  padding-top: 3px;
+  padding-top: 0px;
 }
 
 .header-logo-name > h1 {  
@@ -117,7 +117,7 @@ main
 
 .caption-box-white {  
   background-color: rgba(255, 255, 255, 0.702);
-  padding: 26px 3.3% 20px 9.3%;  
+  padding: 23px 3.3% 23px 9.3%;
   position: absolute;
     top: 50%;
     left: 0%;
@@ -136,7 +136,7 @@ main
 
 .caption-box{
   display: grid;
-  row-gap: 9px;
+  row-gap: 8px;
 }
 @media screen and (max-width: 767px) {
   .caption-box{
@@ -146,7 +146,7 @@ main
 }
 
 #caption-1 {  
-  
+ 
   font-size: 2.5rem;
   line-height: 1.44; 
   }
@@ -173,7 +173,7 @@ main
 greet(ご挨拶)
 --------------------*/
 #greet {
-  padding-block: 63px 58px;  
+  padding-block: 59px 60px;  
 }
 @media screen and (max-width: 767px) {
   #greet {
@@ -220,7 +220,7 @@ greet(ご挨拶)
  text-align: center;
  font-size: 3rem;
  line-height: 1.66;
- margin: 0 auto 15px;
+ margin: 0 auto 14px;
 }
 @media screen and (max-width: 767px) {
   #greet-01 {
@@ -272,8 +272,7 @@ about（強み）
 }
 
 .title {  
-  margin: 0 20px;  
-  font-family: "Yu Gothic","游ゴシック","YuGothic","游ゴシック体";
+  margin: 0 20px;
   font-size: 2.5rem;
   line-height: 1.44;
 }
@@ -291,15 +290,16 @@ about（強み）
   }
 
 .about-wrap {
- padding-top: 41px;
+ /* padding-top: 41px; */
+ padding-top: 48px;
  display: grid;
- row-gap: 42px;
+ row-gap: 47px;
 }
 @media screen and (max-width: 767px) {
   .about-wrap {
-    padding-top: 40px;
+    padding-top: 42px;
     display: grid;
-    row-gap: 42px;
+    row-gap: 39px;
    }
 }
 
@@ -310,7 +310,7 @@ about（強み）
 @media screen and (max-width: 767px) {
   .about-list {
     display: grid;
-     row-gap: 22px;
+     row-gap: 26px;
   }
   .about-list-right-picture {
     display: flex;
@@ -324,17 +324,17 @@ about（強み）
 
 .about-text-wrap{
   display: grid;
-  row-gap: 20px;
+  row-gap: 18px;
   width: 45%;
   text-align: left; 
-  margin-block: 50px;
+  padding-block: 47px 47px;
 }
 @media screen and (max-width: 767px) {
   .about-text-wrap{    
     display: grid;
      row-gap: 7px;
     width: 100%;    
-    margin-block: 0px;
+    padding-block: 0px;
   } 
 }
 
@@ -391,7 +391,7 @@ service（サービス）
 }
 @media screen and (max-width: 767px) {
   #service {
-  padding-block: 47px 40px;
+  padding-block: 46px 40px;
   }  
  } 
 
@@ -405,7 +405,7 @@ service（サービス）
     margin-top: 45px;
     display: block;
     display: grid;
-    row-gap: 38px;
+    row-gap: 40px;
   }
  } 
 
@@ -413,7 +413,7 @@ service（サービス）
  width: 30%;
  text-align: center;
  display: grid;
- row-gap: 19px; 
+ row-gap: 17px; 
 }
 @media screen and (max-width: 767px) {
   .service-list {
@@ -549,7 +549,6 @@ news（お知らせ）
 }
 
 .news-article {
-  /* width: 63.3%; */
   width: 66.3%;
   font-size: 1.7rem;
   font-weight: 500;
@@ -575,7 +574,7 @@ access（アクセス）
 }
 @media screen and (max-width: 767px) {
   #access {
-    padding-block: 43px 50px;  
+    padding-block: 44px 50px;  
   }
 }
 
@@ -589,8 +588,8 @@ access（アクセス）
 
 .access-wrap {  
   display: flex;
-  column-gap: 48px;
-  padding-top: 46px;
+  column-gap: 46px;
+  padding-top: 47px;
 }
 @media screen and (max-width: 767px) {
   .access-wrap {  
@@ -610,19 +609,14 @@ access（アクセス）
     height: 222px;    
   }
 }
-/* @media screen and (max-width: 413px) {
-  .access-wrap > iframe {
-    height: 222px;
-  }
-} */
 
 .access-info-wrap {  
-  width: 44.31%;
+  /* width: 44.31%; */
 }
 @media screen and (max-width: 767px) {
   .access-info-wrap {  
-    width: 335px;
-    padding-top: 31px;
+    width: 336px;
+    padding-top: 28px;
     text-align: left;
     margin-inline: auto ;      
   }
@@ -656,17 +650,21 @@ access（アクセス）
   }
 }
 
-@media (min-width: 768px) and (max-width: 928px) {
-  .info-ib {
+@media screen and (min-width: 927px) {
+  .br-768-926 {
+  display: none;
+ } 
+}
+ @media (min-width: 768px) and (max-width: 926px) {
+  .br-768-926 {
   display: block;
  } 
 }
-
-@media screen and (max-width: 374px) {
-  .info-ib {
-    display: block;
+@media screen and (max-width: 767px) {
+  .br-768-926 {
+    display: none;
    }
-}
+} 
 
 #info-tel {
   line-height: 1.5; 
@@ -684,6 +682,7 @@ access（アクセス）
   color: #0D96A0;
   font-size: 2.5rem;
   line-height: 1.6; 
+  letter-spacing: 0.02em;
 }
 
 #info-mail {  
@@ -701,6 +700,7 @@ access（アクセス）
 
 #info-time-closed {
   line-height: 2.22;
+  letter-spacing: 0.01em;
   padding-block: 16px 12px;  
   border-top: solid 1px #707070;
   border-bottom: solid 1px #707070;
@@ -709,7 +709,7 @@ access（アクセス）
   #info-time-closed {  
     font-size: 1.6rem;   
     line-height: 1.87; 
-    padding-block: 12px;    
+    padding-block: 13px;    
   }
 }
 
@@ -724,7 +724,7 @@ contact（お問い合わせ）
 }
 @media screen and (max-width: 767px) {
   #contact {
-    padding-block: 44px 50px;
+    padding-block: 41px 50px;
   }
 }  
 
@@ -780,7 +780,7 @@ contact（お問い合わせ）
 } 
 
 .contact-label {
-  padding-top: 5px;
+  padding-top: 7px;
   font-size: 2rem;
   line-height: 1.65;
 }
@@ -860,7 +860,7 @@ footer {
 }
 @media screen and (max-width: 767px) {
   footer {    
-    padding-block: 43px 50px;
+    padding-block: 42px 50px;
   }
 } 
 
@@ -950,7 +950,7 @@ footer {
  }
  @media screen and (max-width: 767px) {
   .copy-right {    
-    padding-block: 16px 26px;
+    padding-block: 17px 25px;
    }
 } 
 
@@ -979,7 +979,7 @@ footer {
    justify-content: center;  
   padding-block: 21px 19px;
  }
- @media screen and (max-width: 683px) {  
+ @media screen and (max-width: 767px) {  
   .footer-nav-list {
     width: 100%;  
     flex-wrap: wrap;
@@ -996,7 +996,7 @@ footer {
   padding-block: 21px;
   transition: color 0.4s linear; 
  }
- @media screen and (max-width: 683px) {
+ @media screen and (max-width: 767px) {
   .footer-nav-btn {
     font-size: 1.8rem;
     line-height: 1.83;
@@ -1016,7 +1016,7 @@ footer {
   margin-inline: auto;  
   text-align: center;
  }
-@media screen and (max-width: 683px) {
+@media screen and (max-width: 767px) {
   .line {
     width: 100%; 
    }
@@ -1030,7 +1030,7 @@ footer {
  .copy-right {  
   padding-block: 27px 8px;
  }
- @media screen and (max-width: 683px) {
+ @media screen and (max-width: 767px) {
   .copy-right {    
     padding-block: 18px 26px;
    }
@@ -1040,7 +1040,7 @@ footer {
   font-size: 2rem;
   line-height: 1.65;
  }
- @media screen and (max-width: 683px) {
+ @media screen and (max-width: 767px) {
   .copy-right > p {
     font-size: 1.6rem;
     line-height: 2.06;
