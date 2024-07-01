@@ -146,6 +146,7 @@ main
 }
 
 #caption-1 {  
+  
   font-size: 2.5rem;
   line-height: 1.44; 
   }
@@ -272,6 +273,7 @@ about（強み）
 
 .title {  
   margin: 0 20px;  
+  font-family: "Yu Gothic","游ゴシック","YuGothic","游ゴシック体";
   font-size: 2.5rem;
   line-height: 1.44;
 }
