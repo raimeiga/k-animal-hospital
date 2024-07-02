@@ -243,6 +243,23 @@ greet(ご挨拶)
  line-height: 1.83;
  margin-inline: auto; 
 }
+
+@media screen and (max-width: 905px){
+  #greet-02 {
+    text-align:left;
+  } 
+}
+
+
+/* @media (min-width: 376px) and (max-width: 905px){
+  #greet-02 {
+    text-align:left;
+  }
+  #greet-02 > br {
+   display: none;
+  }
+} */
+
 @media screen and (max-width: 767px) {
   #greet-02 {
     text-align: left;
@@ -294,6 +311,7 @@ about（強み）
  padding-top: 48px;
  display: grid;
  row-gap: 47px;
+ /* row-gap: 6%; */
 }
 @media screen and (max-width: 767px) {
   .about-wrap {
@@ -305,7 +323,8 @@ about（強み）
 
 .about-list {
   display: flex;
-  column-gap: 44px;
+  column-gap: 5%;
+  align-items: center;
 }
 @media screen and (max-width: 767px) {
   .about-list {
@@ -322,7 +341,8 @@ about（強み）
   } 
 }
 
-.about-text-wrap{
+.about-text-wrap {
+  /* background-color: yellow; */
   display: grid;
   row-gap: 18px;
   width: 45%;
@@ -487,83 +507,137 @@ news（お知らせ）
   #news {
     padding-block: 42px 49px;
   }
- } 
+} 
 
  .news-wrap {
-  margin-top: 44px;
+  padding-top: 44px;  
+}
+
+ .news-article {
+  /* background-color: yellow; */
   border-top: solid 1px #707070;
 }
 
-.news-item {
-  display: block;
-  margin-bottom: -1px;
+.last-article {
   border-bottom: solid 1px #707070;
 }
-@media screen and (max-width: 767px) {
-  .news-item {
-    display: block;
-    padding-left: 10px;    
-  }
+
+.news-link {
+  display: flex;  
+  transition: color 0.5s ease-in;  
+  padding-left: 20px;
+}
+@media screen and (max-width: 867px) {
+  .news-link {
+    display: block;  
+    transition: color 0.5s ease-in;  
+  } 
+}
+@media screen and (max-width: 867px) {
+  .news-link {
+    display: block;  
+    transition: color 0.5s ease-in;  
+    padding-left: 10px;
+  } 
 }
 
-.news-item  > a {
-  /* background-color: yellow; */
+
+
+.news-article-box a:hover {  
+  color:#00AAEE;   
+}
+
+.box-child-01 {  
   display: flex;
-  justify-content: left;  
+  column-gap: 25px;  
+  padding: 0 0 0 0px;
 }
 @media screen and (max-width: 767px) {
-  .news-item  > a {    
-    display: block;     
+  .box-child-01 {
+    /* background-color: red;   */    
+    display: block;    
+    padding: 0 0 0 0;
   }
-}
-
-.news-item > a > p:hover {
-  color:#00AAEE; 
 }
 
 .date {
   font-size: 1.7rem;
   line-height: 1.47;
-  padding: 18px 12px 17px 21px; 
-  transition: color 0.5s ease-in; 
+  padding-block: 18px 17px;
+}
+@media screen and (max-width: 867px) {
+  .date {
+    padding-block: 18px 0px;
+  } 
 }
 @media screen and (max-width: 767px) {
   .date {    
     padding: 28px 0px 2px 0px;    
   }  
 }
-
 .news-headline {  
-  width: 23.3%;
-  color: #0D96A0;
+  text-align: left;
+  color:#0D96A0;
   font-size: 2rem;
   line-height: 1.25;  
-  padding: 18px 24.5px 17px 12.5px;  
-  transition: color 0.5s ease-in; 
+  /* padding: 18px 24.5px 17px 12.5px;   */
+  padding-block: 18px 16px;   
+}
+@media screen and (max-width: 867px) { 
+  .news-headline {
+    padding-block: 18px 6px;   
+  }
 }
 @media screen and (max-width: 767px) {
   .news-headline {  
     width: 100%;      
-    padding: 2px 0px 6px 0px;      
+    padding-block: 1px 6px;   
   }
 }
 
-.news-article {
-  width: 66.3%;
+/* ↓ box-child-01のpadding-right */
+#pad-right-01,#pad-right-02 {
+  padding-right: 49px;
+}
+#pad-right-03 {
+  padding-right: 89px;
+}
+#pad-right-04 {
+  padding-right: 69px;
+}
+#pad-right-05 {
+  padding-right: 105px;
+}
+
+
+
+.box-child-02 {
+  /* background-color: pink;   */  
+}
+
+.news-detail {
   font-size: 1.7rem;
   font-weight: 500;
   line-height: 1.764;
-  padding: 15px 40px 15px 24.5px;  
-  transition: color 0.5s ease-in; 
+  /* padding: 15px 40px 15px 24.5px;   */
+  padding: 15px 0px 15px 0px;
+}
+@media screen and (max-width: 867px) {
+  .news-detail {    
+    padding: 0px 0px 15px 0px;
+  }
 }
 @media screen and (max-width: 767px) {
-  .news-article {   
-    width: 100%;
+  .news-detail {       
     font-size: 1.6rem;
     line-height: 1.5;    
     padding: 0px 0px 26px 0px;      
   }  
 }
+
+
+
+
 
 /* -----------------
 access（アクセス）
@@ -821,7 +895,7 @@ contact（お問い合わせ）
 
  .submit-btn-wrap {
   background-color: #0D96A0;
-  width: 22.72%;
+  width: 200px;
   padding-block: 10.5px 9.5px;
   margin: 50px auto 0;
   text-align: center;
@@ -829,7 +903,7 @@ contact（お問い合わせ）
  }
  @media screen and (max-width: 767px) {
   .submit-btn-wrap {    
-    width: 100%;
+    width: 335px;
     padding-block: 8px 7px;    
    }
 } 
