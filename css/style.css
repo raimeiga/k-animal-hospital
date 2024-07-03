@@ -666,7 +666,6 @@ access（アクセス）
   }
 }
 
-
 .access-wrap {  
   display: flex;
   column-gap: 5.2%;
@@ -685,17 +684,12 @@ access（アクセス）
   }
 }
 
-.access-iframe {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-/* よくわからない挙動 */
- .access-iframe-wrap {
+.access-iframe-wrap {
   width: 50%;
   height: 300px;  
 }
+/* ↓画面幅925pxでのメアド改行に伴い
+　  地図の高さ変更 */
 @media screen and (max-width: 925px) {
   .access-iframe-wrap {
     width: 50%;
@@ -703,28 +697,42 @@ access（アクセス）
     margin-inline: auto;
   }
 }
+@media screen and (max-width: 850px) {
+  .access-iframe-wrap {    
+   width: 100%;
+   height: auto;
+   aspect-ratio: 440 / 300;
+  }
+}
 @media screen and (max-width: 767px) {
   .access-iframe-wrap {
-    width: 336px;
-    height: 222px;    
-    margin-inline: auto;
+   width: 100%;
+   height: auto;
+   aspect-ratio: 335 / 222;  
   }
+}
+
+
+.access-iframe {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;  
 }
 
 .access-info-wrap {  
   width: 44.6%;
 }
-/* @media screen and (max-width: 850px) {
+@media screen and (max-width: 850px) {
   .access-info-wrap {  
-    width: 50%;
+    width: 100%;
     padding-top: 30px;
     text-align: left;
     margin-inline: auto;      
   }
-} */
-@media screen and (max-width: 850px) { 
+}
+@media screen and (max-width: 767px) { 
   .access-info-wrap {  
-    width: 336px;
+    width: 100%;
     padding-top: 28px;
     text-align: left;
     margin-inline: auto ;      
@@ -758,8 +766,7 @@ access（アクセス）
   margin-bottom: 14px;
   line-height: 1.5;  
 }
-
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 767px) {
   #info-address {
     font-size: 1.6rem;    
     line-height: 1.5;
@@ -771,7 +778,7 @@ access（アクセス）
   line-height: 1.5; 
   margin-bottom: 8px;
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 767px) {
   #info-tel {   
     font-size: 1.6rem;    
     line-height: 1.68;
@@ -792,14 +799,13 @@ access（アクセス）
   margin-bottom: 26px;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 767px) {
   #info-mail {    
     font-size: 1.6rem;   
     line-height: 1.5; 
     margin-bottom: 13px;
   }
 }
-
 
 #info-time-closed {
   line-height: 2.22;
@@ -808,7 +814,7 @@ access（アクセス）
   border-top: solid 1px #707070;
   border-bottom: solid 1px #707070;
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 767px) {
   #info-time-closed {  
     font-size: 1.6rem;   
     line-height: 1.87; 
