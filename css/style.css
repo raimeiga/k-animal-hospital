@@ -666,24 +666,15 @@ access（アクセス）
   }
 }
 
-/* @media screen and (max-width: 413px) {
-  .access-inner {  
-   width: 100%;
-   padding-inline: 20px;
-   margin-inline: auto;  
-  }
- } */
 
 .access-wrap {  
   display: flex;
-  column-gap: 48px;
+  column-gap: 5.2%;
   padding-top: 47px;
 }
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 850px) {
   .access-wrap {  
-    display: block;
-    display: grid;
-    row-gap: 30px;
+    display: block;    
     margin-inline: auto;    
   }
 }
@@ -695,61 +686,55 @@ access（アクセス）
 }
 
 .access-iframe {
-  width: 440px;
-  height: 300px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
-@media screen and (max-width:929px) {
-  .access-iframe {
-    width: 440px;
-    height: 328px;
-  }
-}
-@media screen and (max-width:926px) {
-  .access-iframe {
-    width: 440px;
-    height: 353px;
-  }
-}
-
 
 /* よくわからない挙動 */
  .access-iframe-wrap {
   width: 50%;
-  height: 300px;
-  object-fit: cover;
+  height: 300px;  
 }
-@media screen and (max-width: 929px) {
+@media screen and (max-width: 925px) {
   .access-iframe-wrap {
     width: 50%;
-    height: 390px;
-    object-fit: none;
+    height: 327px;    
     margin-inline: auto;
   }
 }
 @media screen and (max-width: 767px) {
   .access-iframe-wrap {
-    width: 100%;
+    width: 336px;
     height: 222px;    
+    margin-inline: auto;
   }
 }
 
 .access-info-wrap {  
   width: 44.6%;
 }
-@media screen and (max-width: 880px) {
+/* @media screen and (max-width: 850px) {
   .access-info-wrap {  
     width: 50%;
-    padding-top: 28px;
+    padding-top: 30px;
     text-align: left;
-    margin-inline: auto ;      
+    margin-inline: auto;      
   }
-}
-@media screen and (max-width: 767px) {
+} */
+@media screen and (max-width: 850px) { 
   .access-info-wrap {  
     width: 336px;
     padding-top: 28px;
     text-align: left;
     margin-inline: auto ;      
+  }
+}
+
+/* 画面幅925px以下になると、メアドを改行する措置 */
+@media screen and (max-width: 925px) {
+  .info-ib {
+    display: inline-block;
   }
 }
 
@@ -773,7 +758,8 @@ access（アクセス）
   margin-bottom: 14px;
   line-height: 1.5;  
 }
-@media screen and (max-width: 767px) {
+
+@media screen and (max-width: 850px) {
   #info-address {
     font-size: 1.6rem;    
     line-height: 1.5;
@@ -781,27 +767,11 @@ access（アクセス）
   }
 }
 
-@media screen and (min-width: 927px) {
-  .br-768-926 {
-  display: none;
- } 
-}
- @media (min-width: 881px) and (max-width: 926px) {
-  .br-768-926 {
-  display: block;
- } 
-}
-@media screen and (max-width: 880px) {
-  .br-768-926 {
-    display: none;
-   }
-} 
-
 #info-tel {
   line-height: 1.5; 
   margin-bottom: 8px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 850px) {
   #info-tel {   
     font-size: 1.6rem;    
     line-height: 1.68;
@@ -821,13 +791,15 @@ access（アクセス）
   line-height: 1.5; 
   margin-bottom: 26px;
 }
-@media screen and (max-width: 767px) {
+
+@media screen and (max-width: 850px) {
   #info-mail {    
     font-size: 1.6rem;   
     line-height: 1.5; 
     margin-bottom: 13px;
   }
 }
+
 
 #info-time-closed {
   line-height: 2.22;
@@ -836,7 +808,7 @@ access（アクセス）
   border-top: solid 1px #707070;
   border-bottom: solid 1px #707070;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 850px) {
   #info-time-closed {  
     font-size: 1.6rem;   
     line-height: 1.87; 
