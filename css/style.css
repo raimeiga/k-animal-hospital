@@ -565,11 +565,6 @@ news（お知らせ）
   } 
 }
 
-/* news-headlineだけ変色しない */
-.news-article-box a:hover {  
-  color:#00AAEE;
-}
-
 .box-child-01 {  
   display: flex;
   column-gap: 25px;  
@@ -651,6 +646,13 @@ news（お知らせ）
   }  
 }
 
+/* news-headlineだけ変色しない */
+.news-article-box a:hover,
+.news-headline:hover {  
+  color:#00AAEE;
+}
+
+
 /* -----------------
 access（アクセス）
 --------------------*/
@@ -674,8 +676,16 @@ access（アクセス）
 
 .access-wrap {  
   display: flex;
-  column-gap: 5.2%;
+  column-gap: 48px;
   padding-top: 47px;
+}
+@media screen and (max-width: 880px) {
+  .access-wrap {  
+    display: block;
+    display: grid;
+    row-gap: 30px;
+    margin-inline: auto;    
+  }
 }
 @media screen and (max-width: 767px) {
   .access-wrap {  
@@ -684,31 +694,55 @@ access（アクセス）
   }
 }
 
-/* .access-wrap > iframe {
-  width: 50%;
-  height: 300px;
-} */
-
-/* よくわからない挙動 */
- .access-wrap > div {
-  width: 100%;
+.access-iframe {
+  width: 440px;
   height: 300px;
 }
-/* .access-wrap > div > iframe {
-  width: 100%;
+@media screen and (max-width:929px) {
+  .access-iframe {
+    width: 440px;
+    height: 328px;
+  }
+}
+@media screen and (max-width:926px) {
+  .access-iframe {
+    width: 440px;
+    height: 353px;
+  }
+}
+
+
+/* よくわからない挙動 */
+ .access-iframe-wrap {
+  width: 50%;
   height: 300px;
-}  */
-
-
+  object-fit: cover;
+}
+@media screen and (max-width: 929px) {
+  .access-iframe-wrap {
+    width: 50%;
+    height: 390px;
+    object-fit: none;
+    margin-inline: auto;
+  }
+}
 @media screen and (max-width: 767px) {
-  .access-wrap > iframe {
+  .access-iframe-wrap {
     width: 100%;
     height: 222px;    
   }
 }
 
 .access-info-wrap {  
-  /* width: 44.31%; */
+  width: 44.6%;
+}
+@media screen and (max-width: 880px) {
+  .access-info-wrap {  
+    width: 50%;
+    padding-top: 28px;
+    text-align: left;
+    margin-inline: auto ;      
+  }
 }
 @media screen and (max-width: 767px) {
   .access-info-wrap {  
@@ -752,12 +786,12 @@ access（アクセス）
   display: none;
  } 
 }
- @media (min-width: 768px) and (max-width: 926px) {
+ @media (min-width: 881px) and (max-width: 926px) {
   .br-768-926 {
   display: block;
  } 
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 880px) {
   .br-768-926 {
     display: none;
    }
