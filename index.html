@@ -2,6 +2,17 @@
 <html lang="ja">
 <head>
     <title>滑石きたむら動物病院</title>
+    <!-- ファビコン設定　↓chrome,edge,firefoxではこれがないと反映されない。macは実機がないので未確認 -->
+    <link rel="icon" href="./images/足跡_1.svg">  
+        <!-- 要らないかもしれない↓3行の記述 -->
+    <!-- 1.通常のファビコン（PC版ブラウザ用）： -->
+    <link rel="icon" href="./images/favicon_足跡.ico"/>    
+    <!-- 2.iOS（Appleが開発したモバイルオペレーションシステム）向けファビコン: -->
+    <link rel="apple-touch-icon" href="./images/favicon_足跡.png">
+    <!-- 3.Android向けファビコン： -->
+    <link rel="icon" href="./images/favicon_足跡.png">    
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <meta name="description" content="滑石きたむら動物病院の紹介">
     <meta charset="utf-8">
     <!-- レスポンシブ対応 -->
@@ -73,7 +84,7 @@
 <section id="greet"> 
   <div class="inner greet-inner">      
     <picture  class="three-foot-wrap"> 
-       <source media="(max-width:767px)" srcset="./images/足跡_2_sp.svg">
+       <source media="(max-width:767px)" srcset="./images/足跡_2.svg">
        <img id="three-foot-marks" src="./images/足跡_2.svg" alt="3つの足跡画像"> 
     </picture>   
     <div class="greet-container">
@@ -154,7 +165,7 @@
 <section id="service">
   <div class="inner">
     <div class="title-wrap">           
-        <h2 class="title">サービス</h2>
+        <h2 class="title letter-space-short">サービス</h2>
     </div>
     <div class="service-wrap">
       <div class="service-list">
@@ -210,7 +221,7 @@
         <h2 class="title">お知らせ</h2>
     </div>
     <div class="news-wrap">
-      <article class="news-article">               
+      <article class="news-article news-article-fit" >               
           <div class="news-article-box">
             <a href="#" class="news-link">  
               <div class="box-child-01" id="pad-right-01">
@@ -293,9 +304,15 @@
         <h3>滑石きたむら動物病院</h3>
         <address>      
           <p class="info-font-size" id="info-address">〒852-8065　長崎県長崎市横尾1丁目5-36</p>
-          <p class="info-font-size" id="info-tel">電話：<span>000-0000-0000</span></p>
-          <p class="info-font-size" id="info-mail">メール：<span class="info-ib">info@kitamura.animalhospital.com</span></p>
+          <a href="tel:000-0000-0000">
+            <p class="info-font-size" id="info-tel">電話：<span>000-0000-0000</span></p>
+          </a>
+          <a href="mailto:info@kitamura.animalhospital.com">
+            <p class="info-font-size" id="info-mail">メール：<span class="info-ib">info@kitamura.animalhospital.com</span></p>
+          </a>
         </address> 
+        
+
         <!-- <p class="info-font-size" id="info-address">〒852-8065　<br class="br-768-926">長崎県長崎市横尾1丁目5-36</p>
         <p class="info-font-size" id="info-tel">電話：<span>000-0000-0000</span></p>
         <p class="info-font-size" id="info-mail">メール：<br class="br-768-926">info@kitamura.animalhospital.com</p>

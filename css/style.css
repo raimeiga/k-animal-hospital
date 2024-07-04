@@ -18,6 +18,8 @@ body {
  /* fontの太さは700,500のいずれか */
  color:#505050; 
  letter-spacing: 0;
+ padding-top: 50px;
+ /* ↑高さ50pxのheaderを固定しているための措置 */
 }
 
 picture img {
@@ -29,11 +31,23 @@ header
 --------------------*/
 header {
   height: 50px;  
-}
-
-.header-inner {   
-  max-width: 1000px;  
+  /* ↓ヘッダー固定セットの6行 */
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
   width: 100%;
+  background-color: #fff;
+  /* 背景が白の場合、白を指定しろ！ */
+} 
+/* ↑この場合、親のbodyの上層にheaderが重なるので、
+下の要素（今回はmain-visual)が上に詰めてくる。
+なので、bodyにmargin-topかpadding-topで50px
+追加しておく必要あり。 */
+
+
+.header-inner {    
+  max-width: 1000px;    
   height: inherit;
   padding-inline: 60px 20px;
   margin-inline: auto;  
@@ -117,7 +131,7 @@ main
 
 .caption-box-white {
   background-color: rgba(255, 255, 255, 0.702);
-  padding: 23px 3.3% 23px 9.3%;
+  padding: 23px 3.3% 29px 9.3%;
   position: absolute;
     top: 50%;
     left: 0%;
@@ -144,15 +158,14 @@ main
   }
 }
 
-.caption-box{
-  background-color: yellow;
+.caption-box{  
   display: grid;
   row-gap: 4.8%;
 }
 @media screen and (max-width: 767px) {
   .caption-box{
     display: grid;
-    row-gap: 8px;
+    row-gap: 7px;
   }
 }
 
@@ -171,6 +184,7 @@ main
   #caption-1 {  
     font-size: 2rem;
     line-height: 1.45; 
+    padding-block: 0px;
   }
 }
 
@@ -312,10 +326,9 @@ about（強み）
   justify-content: center;  
 }
 
-.title {  
-  margin: 0 20px;
+.title {    
   font-size: 2.5rem;
-  line-height: 1.44;
+  line-height: 1.44;  
 }
 
 .title::before,
@@ -325,9 +338,10 @@ about（強み）
   background-size: contain;
   vertical-align: middle;
   display: inline-block;
-  width: 25.5px;
+  width: 25px;
   height: 25px;
-  margin-inline: 17.5px 17.5px;  
+  margin-block: 0px 2px;
+  margin-inline: 20px 20.5px;
   }
 
 .about-wrap {
@@ -439,6 +453,10 @@ service（サービス）
   }  
  } 
 
+.letter-space-short {
+  letter-spacing: -0.04em;
+}
+
 .service-wrap {
   margin-top: 48px;
   display: flex;
@@ -499,9 +517,17 @@ service（サービス）
   .service-detail {
     font-size: 1.6rem;
     line-height: 1.875;
+    text-align: center;
+ }
+}
+@media screen and (max-width: 519px) {
+  .service-detail {
+    font-size: 1.6rem;
+    line-height: 1.875;
     text-align: left;
  }
 }
+
 
 /* 
 @media screen and (max-width: 767px) {
@@ -534,13 +560,20 @@ news（お知らせ）
 } 
 
  .news-wrap {
-  padding-top: 44px;  
+  padding-top: 42px;  
+}
+@media screen and (max-width: 767px) {
+  .news-wrap {
+    padding-top: 44px;  
+  }
 }
 
  .news-article {
   /* background-color: yellow; */
   border-top: solid 1px #707070;
 }
+
+
 
 .last-article {
   border-bottom: solid 1px #707070;
@@ -564,6 +597,7 @@ news（お知らせ）
     padding-left: 10px;
   } 
 }
+
 
 .box-child-01 {  
   display: flex;
@@ -658,7 +692,7 @@ access（アクセス）
 --------------------*/
 
 #access {
-  padding-block: 63px 67px;  
+  padding-block: 62px 67px;  
 }
 @media screen and (max-width: 767px) {
   #access {
@@ -712,7 +746,6 @@ access（アクセス）
   }
 }
 
-
 .access-iframe {
   width: 100%;
   height: 100%;
@@ -740,7 +773,7 @@ access（アクセス）
 }
 
 /* 画面幅925px以下になると、メアドを改行する措置 */
-@media screen and (max-width: 925px) {
+@media (min-width: 768px) and (max-width: 925px) {
   .info-ib {
     display: inline-block;
   }
@@ -749,7 +782,7 @@ access（アクセス）
 .access-info-wrap > h3 {
   font-size: 2.2rem;
   line-height: 1.5;
-  padding-bottom: 14px;
+  padding-bottom: 12px;
 }
 
 .info-font-size {
@@ -798,12 +831,12 @@ access（アクセス）
   line-height: 1.5; 
   margin-bottom: 26px;
 }
-
 @media screen and (max-width: 767px) {
   #info-mail {    
     font-size: 1.6rem;   
     line-height: 1.5; 
     margin-bottom: 13px;
+    letter-spacing: -0.01em;
   }
 }
 
@@ -818,7 +851,7 @@ access（アクセス）
   #info-time-closed {  
     font-size: 1.6rem;   
     line-height: 1.87; 
-    padding-block: 13px;    
+    padding-block: 14px 12px;    
   }
 }
 
@@ -833,12 +866,11 @@ contact（お問い合わせ）
 }
 @media screen and (max-width: 767px) {
   #contact {
-    padding-block: 41px 50px;
+    padding-block: 43px 50px;
   }
 }  
 
 .attention {
-  width: 58%;
   text-align: center;
   padding-block: 25px 39px;
   margin-inline: auto;
@@ -848,12 +880,16 @@ contact（お問い合わせ）
 }
 @media screen and (max-width: 767px) {
   .attention {    
-    width: 100%;
-    text-align: left;
+    text-align: center;
     padding-block: 43px 34px;
-    margin-inline: 0;
+    margin-inline: auto;
     font-size: 1.6rem;
     line-height: 1.875;
+  }
+} 
+@media screen and (max-width: 447px) {
+  .attention {    
+    text-align: left;    
   }
 } 
 
@@ -935,7 +971,7 @@ contact（お問い合わせ）
  .submit-btn-wrap {
   background-color: #0D96A0;
   width: 200px;
-  padding-block: 10.5px 9.5px;
+  padding-block: 10px 7px;
   margin: 50px auto 0;
   text-align: center;
   border-radius: 10px;
@@ -951,7 +987,7 @@ contact（お問い合わせ）
   color: #fff;
   font-size: 2.5rem; 
   line-height: 1.32;
-  letter-spacing: 0.1em;  
+  letter-spacing: 0.2em;  
 }
 @media screen and (max-width: 767px) {
   .submit-btn {      
