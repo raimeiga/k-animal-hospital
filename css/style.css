@@ -895,6 +895,7 @@ contact（お問い合わせ）
 .form-wrap {
   display: grid;
   row-gap: 30px;
+  padding-bottom: 50px;
 }
 @media screen and (max-width: 767px) {
   .form-wrap {
@@ -967,15 +968,23 @@ contact（お問い合わせ）
   line-height: 1.5; 
  }
 
- .submit-btn-wrap {
-  background-color: #0D96A0;
+.kimoto {
+  margin-inline: auto;
   width: 200px;
-  padding-block: 10px 7px;
-  margin: 50px auto 0;
+  height: 50px;
+}
+
+.submit-btn-wrap {
+  background-color: #0D96A0;
+  width: inherit;
+  height: inherit;
+  /* padding-block: 10px 7px; */
+  margin-inline: auto;
   text-align: center;
   border-radius: 10px;
- }
- @media screen and (max-width: 767px) {
+  transition: transform 0.6s ease;
+}
+@media screen and (max-width: 767px) {
   .submit-btn-wrap {    
     width: 335px;
     padding-block: 8px 7px;    
@@ -983,6 +992,9 @@ contact（お問い合わせ）
 } 
 
 .submit-btn {  
+  width: inherit;
+  height: inherit;
+  /* margin-block: 8px; */
   color: #fff;
   font-size: 2.5rem; 
   line-height: 1.32;
@@ -995,6 +1007,35 @@ contact（お問い合わせ）
     letter-spacing: 0.3em;
   }
 } 
+
+.submit-btn-wrap:hover {
+  cursor: pointer;
+  transform: scale(1.1); 
+  transform: translateX(5px);
+  background-color: #fff;
+  color: #0D96A0;
+}
+
+.submit-btn-wrap.reverse:hover {
+  background-color: #fff;
+  color:#0D96A0;
+}
+
+
+/* 
+.my-button {
+  width: 100px; 
+  height: 40px; 
+  background-color: #0074d9; 
+  color: #fff; 
+  transition: transform 0.3s ease; 
+}
+.my-button:hover {
+  transform: scale(1.1); 
+} */
+
+
+
 
 /* -----------------
 footer
@@ -1098,7 +1139,7 @@ footer {
     line-height: 2.06;
    }
  } 
-  
+
  .sns-icon-wrap {
   display: flex;
   justify-content: center;
