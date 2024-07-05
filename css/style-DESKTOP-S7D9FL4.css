@@ -968,63 +968,72 @@ contact（お問い合わせ）
   line-height: 1.5; 
  }
 
-.submit-btn-container {
+.kimoto {
+  margin-inline: auto;
   width: 200px;
   height: 50px;
-  margin-inline: auto;
-  display: flex;
-  align-items: center;  
 }
 
-.submit-btn {
+.submit-btn-wrap {
   background-color: #0D96A0;
-  border: solid 1px rgba(13, 150, 160, 0.102);  
   width: inherit;
-  height: inherit;  
+  height: inherit;
   /* padding-block: 10px 7px; */
   margin-inline: auto;
   text-align: center;
   border-radius: 10px;
-  transition: background-color 0.6s linear;
+  transition: transform 0.6s ease;
 }
 @media screen and (max-width: 767px) {
-  .submit-btn {    
+  .submit-btn-wrap {    
     width: 335px;
     padding-block: 8px 7px;    
    }
 } 
 
-.submit-btn-input {  
+.submit-btn {  
   width: inherit;
-  height: inherit;  
+  height: inherit;
+  /* margin-block: 8px; */
   color: #fff;
   font-size: 2.5rem; 
   line-height: 1.32;
-  vertical-align: middle;  /*インライン要素の上下中央揃え*/
-  display: flex;
-  align-items: center;
-  letter-spacing: 0.2em;   
-  text-indent: 0.2em;/*文字下げ*/  
-  transition: color 0.6s linear;
+  letter-spacing: 0.2em;  
 }
 @media screen and (max-width: 767px) {
-  .submit-btn-input {      
+  .submit-btn {      
     font-size: 2rem;    
     line-height: 1.3;
     letter-spacing: 0.3em;
   }
 } 
 
-.submit-btn:hover {
-  cursor: pointer;  
-  color:#0D96A0;
+.submit-btn-wrap:hover {
+  cursor: pointer;
+  transform: scale(1.1); 
+  transform: translateX(5px);
   background-color: #fff;
-  border: solid 1px #0D96A0;  
+  color: #0D96A0;
 }
 
-.submit-btn-input:hover {  
+.submit-btn-wrap.reverse:hover {
+  background-color: #fff;
   color:#0D96A0;
 }
+
+
+/* 
+.my-button {
+  width: 100px; 
+  height: 40px; 
+  background-color: #0074d9; 
+  color: #fff; 
+  transition: transform 0.3s ease; 
+}
+.my-button:hover {
+  transform: scale(1.1); 
+} */
+
 
 
 
