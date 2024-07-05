@@ -3,7 +3,7 @@
 html {
  padding: 0;
  margin: 0;
- scroll-behavior: smooth;
+ scroll-behavior: smooth; 
  font-size: 10px;
 }
 
@@ -39,6 +39,7 @@ header {
   width: 100%;
   background-color: #fff;
   /* 背景が白の場合、白を指定しろ！ */
+
 } 
 /* ↑この場合、親のbodyの上層にheaderが重なるので、
 下の要素（今回はmain-visual)が上に詰めてくる。
@@ -61,22 +62,22 @@ header {
   }
 }
 
-.header-logo-name {
+.header-logo-box {
   padding-top: 0px;
 }
 
-.header-logo-name > h1 {  
+.header-name {  
   font-size: 1.8rem;
   line-height: 1.83;
  }
 @media screen and (max-width: 767px) {
- .header-logo-name > h1 {  
+ .header-name {  
    font-size: 2rem;
    line-height: 1.65;
   }
 }
  
- .header-logo-name > h1:before {
+ .header-name:before {
   content: " ";
   background-image: url(../images/足跡_1.svg);
   background-size: contain;
@@ -573,25 +574,23 @@ news（お知らせ）
   border-top: solid 1px #707070;
 }
 
-
-
 .last-article {
   border-bottom: solid 1px #707070;
 }
 
-.news-link {
+.link-to-news {
   display: flex;  
   transition: color 0.5s ease-in;  
   padding-left: 20px;
 }
 @media screen and (max-width: 867px) {
-  .news-link {
+  .link-to-news {
     display: block;  
     transition: color 0.5s ease-in;  
   } 
 }
 @media screen and (max-width: 867px) {
-  .news-link {
+  .link-to-news {
     display: block;  
     transition: color 0.5s ease-in;  
     padding-left: 10px;
