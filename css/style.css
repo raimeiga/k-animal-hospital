@@ -1046,7 +1046,7 @@ footer {
   font-size: 2rem;
   line-height: 1.65;
   padding-block: 21px;
-  transition: color 0.4s linear; 
+  transition: 0.6s linear; 
  }
  @media screen and (max-width: 767px) {
   .footer-nav-btn {
@@ -1057,7 +1057,7 @@ footer {
 } 
 
  .footer-nav-btn:hover {
-   color: #00AAEE;
+   opacity: 0.6;
  }
 
 .line {
@@ -1109,6 +1109,11 @@ footer {
 
  .sns-icon-wrap a {
   width: 22px;
+  transition: 0.6s linear;
+ }
+
+ .sns-icon-wrap a:hover {
+  opacity: 0.6;
  }
 
  .sns-icon-wrap a:nth-child(4) {
