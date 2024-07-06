@@ -587,6 +587,12 @@ news（お知らせ）
   .link-to-news {
     display: block;  
     transition: color 0.5s ease-in;  
+  } 
+}
+@media screen and (max-width: 867px) {
+  .link-to-news {
+    display: block;  
+    transition: color 0.5s ease-in;  
     padding-left: 10px;
   } 
 }
@@ -713,11 +719,8 @@ access（アクセス）
 
 .access-iframe-wrap {
   width: 50%;
-  /* height: 300px;   */
-  /* 親にflex設定してるからalign-items:stretch;（初期値）
-  が機能し、横の高さに合わせて伸びる。なのでheight不要。 */
+  height: 300px;  
 }
-
 /* ↓画面幅925pxでのメアド改行に伴い
 　  地図の高さ変更 */
 @media screen and (max-width: 925px) {
@@ -745,7 +748,7 @@ access（アクセス）
 .access-iframe {
   width: 100%;
   height: 100%;
-  object-fit: cover;  
+  object-fit: contain;  
 }
 
 .access-info-wrap {  
@@ -922,7 +925,7 @@ contact（お問い合わせ）
 } 
 
 .contact-label {
-  padding-top: 7px;  
+  padding-top: 3px;  
   font-size: 2rem;
   line-height: 1.65;
 }
@@ -972,22 +975,27 @@ contact（お問い合わせ）
   display: flex;
   align-items: center;  
 }
+@media screen and (max-width: 767px) {
+  .submit-btn-container {
+    width: 335px;
+    height: 41px;
+  }
+}
 
-.submit-btn {
-  background-color: #0D96A0;
-  border: solid 1px rgba(13, 150, 160, 0.102);  
+.submit-btn {  
   width: inherit;
   height: inherit;  
-  /* padding-block: 10px 7px; */
-  margin-inline: auto;
+  background-color: #0D96A0;
+  border: solid 1px rgba(13, 150, 160, 0.102);  
   text-align: center;
   border-radius: 10px;
+  margin-inline: auto;
   transition: background-color 0.6s linear;
 }
 @media screen and (max-width: 767px) {
   .submit-btn {    
-    width: 335px;
-    padding-block: 8px 7px;    
+    width: inherit;
+    height: inherit;      
    }
 } 
 
@@ -997,15 +1005,18 @@ contact（お問い合わせ）
   color: #fff;
   font-size: 2.5rem; 
   line-height: 1.32;
-  vertical-align: middle;  /*インライン要素の上下中央揃え*/
-  display: flex;
-  align-items: center;
   letter-spacing: 0.2em;   
   text-indent: 0.2em;/*文字下げ*/  
+  display: flex;
+  align-items: center;
+  vertical-align: middle;  /*インライン要素の上下中央揃え*/
+  
   transition: color 0.6s linear;
 }
 @media screen and (max-width: 767px) {
   .submit-btn-input {      
+    width: inherit;
+    height: inherit;  
     font-size: 2rem;    
     line-height: 1.3;
     letter-spacing: 0.3em;
