@@ -587,12 +587,6 @@ news（お知らせ）
   .link-to-news {
     display: block;  
     transition: color 0.5s ease-in;  
-  } 
-}
-@media screen and (max-width: 867px) {
-  .link-to-news {
-    display: block;  
-    transition: color 0.5s ease-in;  
     padding-left: 10px;
   } 
 }
@@ -719,8 +713,11 @@ access（アクセス）
 
 .access-iframe-wrap {
   width: 50%;
-  height: 300px;  
+  /* height: 300px;   */
+  /* 親にflex設定してるからalign-items:stretch;（初期値）
+  が機能し、横の高さに合わせて伸びる。なのでheight不要。 */
 }
+
 /* ↓画面幅925pxでのメアド改行に伴い
 　  地図の高さ変更 */
 @media screen and (max-width: 925px) {
@@ -748,7 +745,7 @@ access（アクセス）
 .access-iframe {
   width: 100%;
   height: 100%;
-  object-fit: contain;  
+  object-fit: cover;  
 }
 
 .access-info-wrap {  
@@ -925,7 +922,7 @@ contact（お問い合わせ）
 } 
 
 .contact-label {
-  padding-top: 3px;  
+  padding-top: 7px;  
   font-size: 2rem;
   line-height: 1.65;
 }
