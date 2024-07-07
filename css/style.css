@@ -130,7 +130,63 @@ main
   position: relative;
 }
 
-.caption-box-white {
+.mv-contents {
+ width: 100%;
+ height: 100%;
+ position: absolute;
+ top: 0;
+ left: 0;
+ padding-top: calc(152 / 1080 * 100vw);
+}
+@media screen and (max-width: 767px) {
+ .mv-contents {  
+  display: flex;
+  align-items: flex-end;  
+ }
+}
+
+.mv-catch {  
+  width: calc(492 / 1080 * 100vw);
+  height: calc(210 / 1080 * 100vw);
+  background-color: rgba(255, 255, 255, 0.702);  
+  display: flex;
+  align-items: center;
+  padding-left: calc(99 / 1080 * 100vw);
+}
+@media screen and (max-width: 767px) {
+  .mv-catch {  
+    width: calc(311 / 375 * 100vw);
+    height: calc(148 / 375 * 100vw);    
+    display: flex;
+    align-items: center;
+    padding-left: calc(20 / 375 * 100vw);
+  }
+}
+
+.mv-catch > h2 {
+  font-size: calc(25 / 1080 * 100vw);
+  line-height: 1.44; 
+}
+@media screen and (max-width: 767px) {
+  .mv-catch > h2 {
+    font-size: calc(20 / 375 * 100vw);
+    line-height: calc(29 / 20);
+  }
+}
+.mv-catch > h2 > span {
+  color: #0D96A0;
+  font-size: calc(40 / 1080 * 100vw);
+  line-height: 1.5; 
+}
+@media screen and (max-width: 767px) {
+  .mv-catch > h2 > span {
+    color: #0D96A0;
+    font-size: calc(30 / 375 * 100vw);
+    line-height: calc(40 / 30);
+  }
+}
+
+/* .caption-box-white {
   background-color: rgba(255, 255, 255, 0.702);
   padding: 23px 3.3% 29px 9.3%;
   position: absolute;
@@ -149,8 +205,7 @@ main
  }
 }
 @media screen and (max-width: 767px) {
-  .caption-box-white {  
-  /* background-color: yellow; */
+  .caption-box-white {    
   padding: 18px 6.6% 14px 5.3%;    
   position: absolute;
    top: 50%;
@@ -206,7 +261,7 @@ main
     font-size: 3rem;
     line-height: 1.33; 
     } 
-}
+} */
 
 /* -----------------
 greet(ご挨拶)
