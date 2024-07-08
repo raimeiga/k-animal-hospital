@@ -148,41 +148,42 @@ main
 .mv-catch {  
   width: calc(492 / 1080 * 100vw);
   height: calc(210 / 1080 * 100vw);
-  background-color: rgba(255, 255, 255, 0.702);  
-  display: flex;
-  align-items: center;
+  background-color: rgba(255, 255, 255, 0.702);
   padding-left: calc(99 / 1080 * 100vw);
+  padding-top: calc(23 / 1080 * 100vw);
 }
 @media screen and (max-width: 767px) {
   .mv-catch {  
     width: calc(311 / 375 * 100vw);
-    height: calc(148 / 375 * 100vw);    
-    display: flex;
-    align-items: center;
-    padding-left: calc(20 / 375 * 100vw);
+    height: calc(151 / 375 * 100vw);    
+    padding-left: calc(20 / 375 * 100vw); 
+    padding-top: calc(18 / 375 * 100vw);   
   }
 }
 
-.mv-catch > h2 {
+
+.mv-catch-01 h2 {
   font-size: calc(25 / 1080 * 100vw);
-  line-height: 1.44; 
+  line-height: calc(36 / 25);  
 }
 @media screen and (max-width: 767px) {
-  .mv-catch > h2 {
+  .mv-catch-01 h2 {
     font-size: calc(20 / 375 * 100vw);
-    line-height: calc(29 / 20);
+    line-height: calc(29 / 20);     
   }
 }
-.mv-catch > h2 > span {
-  color: #0D96A0;
+.mv-catch-02 h2 {
+  color: #0D96A0;  
   font-size: calc(40 / 1080 * 100vw);
-  line-height: 1.5; 
+  line-height: calc(60 / 40);  
+  padding-top: calc(7 / 1080 *100vw);
 }
 @media screen and (max-width: 767px) {
-  .mv-catch > h2 > span {
+.mv-catch-02 h2 {
     color: #0D96A0;
     font-size: calc(30 / 375 * 100vw);
     line-height: calc(40 / 30);
+    padding-top: calc(7 / 375 *100vw);
   }
 }
 
@@ -618,7 +619,7 @@ news（お知らせ）
 } 
 
  .news-wrap {
-  padding-top: 42px;  
+  padding-top: 44px;  
 }
 @media screen and (max-width: 767px) {
   .news-wrap {
@@ -626,122 +627,79 @@ news（お知らせ）
   }
 }
 
- .news-article {
-  /* background-color: yellow; */
+article:first-of-type {
   border-top: solid 1px #707070;
 }
 
-.last-article {
-  border-bottom: solid 1px #707070;
-}
-
-.link-to-news {
+.news-list {
   display: flex;  
-  transition: color 0.5s ease-in;  
-  padding-left: 20px;
-}
-@media screen and (max-width: 867px) {
-  .link-to-news {
-    display: block;  
-    transition: color 0.5s ease-in;  
-  } 
-}
-@media screen and (max-width: 867px) {
-  .link-to-news {
-    display: block;  
-    transition: color 0.5s ease-in;  
-    padding-left: 10px;
-  } 
-}
-
-
-.box-child-01 {  
-  display: flex;
-  column-gap: 25px;  
-  padding: 0 0 0 0px;
+  column-gap: calc(27 / 880 * 100%);
+  align-items: center;
+  /* justify-content: flex-start; */
+  padding: 1.5rem 1.85rem 1.4rem;
+  border-bottom: solid 1px #707070;
+  transition: 0.6s linear; 
 }
 @media screen and (max-width: 767px) {
-  .box-child-01 {
-    /* background-color: red;   */    
-    display: block;    
-    padding: 0 0 0 0;
+  .news-list {
+    display: block;  
+    padding: 2.8rem 0rem 2.7rem 1rem;
+    border-bottom: solid 1px #707070;
+    transition: 0.6s linear; 
   }
 }
+/* ---news-list（コンテナ）と３つのitemについて---
+　コンテナにdisplay: flex;を指定すると
+  justify:contentの初期値がflex-startなので、
+  指定せずとも左寄せに配置される
+  ↓
+  ・コンテナにcolumn-gapでカンプどおりに25pxの余白を形成
+  ・真ん中の.news-list-headlineのwidthを18.4remで決め打ち
+  （5つのheadline中、最多８文字が入る160pxに24pxを足し、
+  　column-gap:25pxに合わせる）
+  ↓
+  .news-list-detailにflex: 1;を指定すれば、可変幅に対応できる
+*/
+ 
+.news-list-date time {
+ font-size: 1.7rem;
+ line-height: calc(25 / 17);
+}
 
-.date {
-  font-size: 1.7rem;
-  line-height: 1.47;
-  padding-block: 18px 17px;
+.news-list-headline {
+  /* width: calc(184 / 880 * 100%); */
+  width: 18.4rem;  
 }
-@media screen and (max-width: 867px) {
-  .date {
-    padding-block: 18px 0px;
-  } 
-}
-@media screen and (max-width: 767px) {
-  .date {    
-    padding: 28px 0px 2px 0px;    
-  }  
-}
-.news-headline {  
-  text-align: left;
+
+.news-list-headline h3 {
   color:#0D96A0;
   font-size: 2rem;
-  line-height: 1.25;  
-  /* padding: 18px 24.5px 17px 12.5px;   */
-  padding-block: 18px 16px;   
-}
-@media screen and (max-width: 867px) { 
-  .news-headline {
-    padding-block: 18px 6px;   
-  }
+  line-height: calc(25 / 20);  
 }
 @media screen and (max-width: 767px) {
-  .news-headline {  
-    width: 100%;      
-    padding-block: 1px 6px;   
+  .news-list-headline h3 {  
+    padding-block: 0.2rem 0.6rem;
   }
 }
 
-/* ↓ box-child-01のpadding-right */
-#pad-right-01,#pad-right-02 {
-  padding-right: 49px;
+.news-list-detail {
+ flex: 1;
 }
-#pad-right-03 {
-  padding-right: 89px;
-}
-#pad-right-04 {
-  padding-right: 69px;
-}
-#pad-right-05 {
-  padding-right: 105px;
-}
-
-.news-detail {
+.news-list-detail p {
   font-size: 1.7rem;
   font-weight: 500;
-  line-height: 1.764;  
-  padding: 15px 0px 15px 0px;
-}
-@media screen and (max-width: 867px) {
-  .news-detail {    
-    padding: 0px 0px 15px 0px;
-  }
-}
-@media screen and (max-width: 767px) {
-  .news-detail {       
-    font-size: 1.6rem;
-    line-height: 1.5;    
-    padding: 0px 0px 26px 0px;      
-  }  
-}
-
-/* news-headlineだけ変色しない */
-.news-article-box a:hover,
-.news-headline:hover {  
-  color:#00AAEE;
-}
-
+  line-height: calc(30 / 17);
+ }
+ @media screen and (max-width: 767px) {
+  .news-list-detail p {
+    font-size: 1.6rem;    
+    line-height: calc(24 / 16);   
+   }
+ }
+ 
+ .news-list:hover{  
+  opacity: 0.6;
+ }
 
 /* -----------------
 access（アクセス）
@@ -875,6 +833,12 @@ access（アクセス）
   }
 }
 
+@media screen and (min-width: 768px) {
+  .tel {
+    pointer-events: none;
+  } 
+}
+
 #info-tel > span {
   color: #0D96A0;
   font-size: 2.5rem;
@@ -982,7 +946,7 @@ contact（お問い合わせ）
 } 
 
 .contact-label {
-  padding-top: 3px;  
+  padding-top: 7px;  
   font-size: 2rem;
   line-height: 1.65;
 }
@@ -1092,14 +1056,13 @@ contact（お問い合わせ）
 }
 
 
-
 /* -----------------
 footer
 --------------------*/
 
 footer {
   height: 280px;  
-  padding-block: 43px 70px;
+  padding-block: 46px 70px;
   background-color: #505050; 
   color: #fff;
 }
@@ -1206,11 +1169,12 @@ footer {
 
  .sns-icon-wrap a {
   width: 22px;
-  transition: 0.6s linear;
+  transition: 0.4s;
  }
 
  .sns-icon-wrap a:hover {
   opacity: 0.6;
+  transform: scale(1.2);
  }
 
  .sns-icon-wrap a:nth-child(4) {
