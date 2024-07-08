@@ -427,11 +427,13 @@ about（強み）
   }
   .about-list-right-picture {
     display: flex;
-    flex-wrap: wrap-reverse;    
+    flex-direction: column-reverse;
+    /* flex-wrap: wrap-reverse;     */
   }
   .about-list-left-picture {
     display: flex;
-    flex-wrap: wrap;    
+    flex-direction: column;
+    /* flex-wrap: wrap;     */
   } 
 }
 
