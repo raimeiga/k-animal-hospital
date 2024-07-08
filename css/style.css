@@ -295,7 +295,7 @@ greet(ご挨拶)
 
 .three-foot-wrap { 
   position: absolute;
-  bottom: -24px;
+  bottom: -29px;
   right: 2%;
   transform: translateX(4%); 
   width: 84px;}
@@ -303,7 +303,7 @@ greet(ご挨拶)
 @media screen and (max-width: 767px) {
   .three-foot-wrap { 
     position: absolute;
-    bottom: 7px;
+    bottom: 4px;
     right: 8%;    
     transform: translateX(2%); 
     width: 68px;
