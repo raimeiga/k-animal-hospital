@@ -77,7 +77,7 @@ header {
   }
 }
  
- .header-name:before {
+ .header-name::before {
   content: " ";
   background-image: url(../images/足跡_1.svg);
   background-size: contain;
